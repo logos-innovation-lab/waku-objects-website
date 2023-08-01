@@ -42,36 +42,88 @@
 		</div>
 	</Container>
 </div>
-<Container>
-	<h2>Why is it?</h2>
-	<p>
-		Talk about “chat app to rule them all” like wechat etc, and how we need an open, distributed and
-		free alternative to these monolithic corporate succubus
-	</p>
-</Container>
+<div class="why">
+	<Container>
+		<h2>Why Waku Objects?</h2>
+		<p>
+			The concept of a "chat app to rule them all" refers to an all-encompassing, feature-rich
+			messaging application that provides a wide range of services and functionalities beyond just
+			text messaging. WeChat is a prime example of such an app, especially popular in China, where
+			it has become a central part of people's lives. It goes beyond simple messaging, offering
+			features such as social networking, mobile payments, gaming, shopping, and various other
+			services, making it an indispensable platform for many users.
+		</p>
+		<p>
+			While these super apps have undoubtedly revolutionized the way we communicate and interact
+			online, they raise concerns about data privacy, user surveillance, and the centralized control
+			of user data by corporations and states. Many users have become increasingly cautious about
+			their digital footprints and the potential misuse of their personal information.
+		</p>
+		<p>
+			Waku Objects aims to be a starting point for a concerted effort from both developers and users
+			who value privacy, decentralization, and openness. With time, effort, and support, a
+			decentralized and open chat app could emerge as a formidable competitor to the existing
+			corporate behemoths.
+		</p>
+		<h3>Data Privacy and Security</h3>
+		<p>
+			In centralized chat apps, user data is stored on servers controlled by a company, making it
+			susceptible to data breaches and surveillance by states. An open, distributed alternative
+			employs end-to-end encryption and decentralized storage, giving users more control over their
+			data and enhancing security.
+		</p>
+		<h3>Avoiding Vendor Lock-in</h3>
+		<p>
+			With proprietary chat apps, users are tied to a specific ecosystem, limiting their freedom to
+			switch between platforms. An open alternative ensures interoperability and allows users to
+			communicate across different platforms seamlessly.
+		</p>
+		<h3>Community-Driven Development:</h3>
+		<p>
+			A decentralized and open platform fostering a community of developers who can contribute to
+			its improvement and ensure that it serves the needs and interests of its users, rather than
+			being driven solely by profit motives.
+		</p>
+		<h3>Global Accessibility</h3>
+		<p>
+			Accessible to users worldwide, including those in regions where certain corporate apps might
+			be restricted or inaccessible.
+		</p>
+		<h3>Innovation and Customization:</h3>
+		<p>
+			Encouraging innovation and customization, allowing developers to create new features and
+			extensions that suit their needs and preferences.
+		</p>
+	</Container>
+</div>
 <Divider />
-<Container>
-	<h2>How does it work?</h2>
-	<ul>
-		<li>Explain the system</li>
-		<li>A bit about waku</li>
-		<li>Waku Objects; how is it build, how to use it, how to make one yourself.</li>
-		<li>Implementation details</li>
-		<li>Design system</li>
-		<li>Protocol (link to md)</li>
-	</ul>
-</Container>
+<div class="how">
+	<Container>
+		<h2>How does it work?</h2>
+		<ul>
+			<li>Explain the system</li>
+			<li>A bit about waku</li>
+			<li>Waku Objects; how is it build, how to use it, how to make one yourself.</li>
+			<li>Implementation details</li>
+			<li>Design system</li>
+			<li>Protocol (link to md)</li>
+		</ul>
+	</Container>
+</div>
 <Divider />
-<Container>
-	<h2>How can I use this in my app?</h2>
-	<p>Check out the Sandbox and play with it or read the docs</p>
-</Container>
+<div class="use">
+	<Container>
+		<h2>How can I use this in my app?</h2>
+		<p>Check out the Sandbox and play with it or read the docs</p>
+	</Container>
+</div>
 <Divider />
-<Container>
-	<h2>Who made this?</h2>
-	<p>Logos Innovation Lab boilerplate</p>
-</Container>
-<Divider />
+<div class="who">
+	<Container>
+		<h2>Who made this?</h2>
+		<p>Logos Innovation Lab boilerplate</p>
+	</Container>
+</div>
 <!-- <Container>
 	<div class="cols">
 		<div class="col">
