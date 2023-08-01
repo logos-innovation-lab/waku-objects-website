@@ -14,7 +14,7 @@
 			</p>
 			<div class="buttons">
 				<a
-					href="https://github.com/logos-innovation-lab/Kurate"
+					href="https://github.com/logos-innovation-lab/waku-objects-playground"
 					class="button secondary"
 					target="_blank"
 				>
