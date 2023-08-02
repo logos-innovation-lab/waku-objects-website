@@ -4,9 +4,13 @@
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
+	import LogoDiscord from '$lib/components/icons/logo-discord.svelte'
+	import LogoGithub from '$lib/components/icons/logo-github.svelte'
+	import LogoSketch from '$lib/components/icons/logo-sketch.svelte'
 
 	// Icons
 	import WakuLogo from '$lib/components/icons/waku-logo.svelte'
+	import Object from '$lib/components/object.svelte'
 </script>
 
 <div class="hero">
@@ -41,6 +45,89 @@
 			</div>
 		</div>
 	</Container>
+</div>
+<div class="objects">
+	<Object name="SafeMeet" status="concept">
+		<svelte:fragment slot="description">
+			<p>
+				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
+				someone in real life can be an increasingly challenging task. GPS tracking, social media,
+				and surveillance cameras, make it easier for someone to be tracked or followed,
+				unintentionally compromising personal safety and privacy.
+			</p>
+			<p>
+				To address this concern, SafeMeet allows users to set up a meeting without revealing their
+				location until the last moment. It helps mitigate potential risks associated with online
+				interactions transitioning to real-world encounters.
+			</p>
+		</svelte:fragment>
+		<svelte:fragment slot="image">
+			<figure>
+				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
+			</figure>
+		</svelte:fragment>
+		<svelte:fragment slot="links">
+			<p>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
+				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"><LogoSketch /></a>
+				<span>Logos Innovation Lab</span>
+			</p>
+		</svelte:fragment>
+	</Object>
+	<Object name="Payggy" status="under development">
+		<svelte:fragment slot="description">
+			<p>
+				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
+				someone in real life can be an increasingly challenging task. GPS tracking, social media,
+				and surveillance cameras, make it easier for someone to be tracked or followed,
+				unintentionally compromising personal safety and privacy.
+			</p>
+			<p>
+				To address this concern, SafeMeet allows users to set up a meeting without revealing their
+				location until the last moment. It helps mitigate potential risks associated with online
+				interactions transitioning to real-world encounters.
+			</p>
+		</svelte:fragment>
+		<svelte:fragment slot="image">
+			<figure>
+				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
+			</figure>
+		</svelte:fragment>
+		<svelte:fragment slot="links">
+			<p>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
+				<a href="https://discord.gg/npkeT33a"><LogoDiscord /></a>
+				<span>Logos Innovation Lab</span>
+			</p>
+		</svelte:fragment>
+	</Object>
+	<Object name="SafeMeet" status="concept">
+		<svelte:fragment slot="description">
+			<p>
+				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
+				someone in real life can be an increasingly challenging task. GPS tracking, social media,
+				and surveillance cameras, make it easier for someone to be tracked or followed,
+				unintentionally compromising personal safety and privacy.
+			</p>
+			<p>
+				To address this concern, SafeMeet allows users to set up a meeting without revealing their
+				location until the last moment. It helps mitigate potential risks associated with online
+				interactions transitioning to real-world encounters.
+			</p>
+		</svelte:fragment>
+		<svelte:fragment slot="image">
+			<figure>
+				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
+			</figure>
+		</svelte:fragment>
+		<svelte:fragment slot="links">
+			<p>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
+				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"><LogoSketch /></a>
+				<span>Logos Innovation Lab</span>
+			</p>
+		</svelte:fragment>
+	</Object>
 </div>
 <div class="why">
 	<Container>
