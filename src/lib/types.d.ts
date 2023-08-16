@@ -9,4 +9,6 @@ export type ComponentConstructor<T extends Record<string, any>> = new (args: {
 export interface IconProps {
 	size?: number
 	color?: string
+	title?: string
+	desc?: string
 }

@@ -13,6 +13,13 @@
 	import Object from '$lib/components/object.svelte'
 </script>
 
+<header>
+	<div class="logo">
+		<WakuLogo size={48} title="Waku brand logo" />
+		Waku Play
+	</div>
+	<nav class="nav-main" />
+</header>
 <div class="hero">
 	<Container>
 		<div class="content">
@@ -68,8 +75,12 @@
 		</svelte:fragment>
 		<svelte:fragment slot="links">
 			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
-				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"><LogoSketch /></a>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
+					><LogoGithub title="Github brand logo" /></a
+				>
+				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"
+					><LogoSketch title="Sketch brand logo" /></a
+				>
 				<span>Logos Innovation Lab</span>
 			</p>
 		</svelte:fragment>
@@ -95,8 +106,10 @@
 		</svelte:fragment>
 		<svelte:fragment slot="links">
 			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
-				<a href="https://discord.gg/npkeT33a"><LogoDiscord /></a>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
+					><LogoGithub title="Github brand logo" /></a
+				>
+				<a href="https://discord.gg/npkeT33a"><LogoDiscord title="Discord brand logo" /></a>
 				<span>Logos Innovation Lab</span>
 			</p>
 		</svelte:fragment>
@@ -122,8 +135,12 @@
 		</svelte:fragment>
 		<svelte:fragment slot="links">
 			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"><LogoGithub /></a>
-				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"><LogoSketch /></a>
+				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
+					><LogoGithub title="Github brand logo" /></a
+				>
+				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"
+					><LogoSketch title="Sketch brand logo" /></a
+				>
 				<span>Logos Innovation Lab</span>
 			</p>
 		</svelte:fragment>
