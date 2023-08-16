@@ -5,6 +5,7 @@
 
 	export let size = 20
 	export let color = '--color-step-50'
+	export let title: string | undefined = undefined
 </script>
 
 <svg
@@ -12,7 +13,10 @@
 	viewBox={`0 0 48 46`}
 	width={size}
 	height={(size / 24) * 23}
+	aria-labelledby={title}
+	role="img"
 >
+	<title>{title}</title>
 	<g fill="none" fill-rule="evenodd">
 		<path d="M0 0h48v46H0z" />
 		<g fill={`var(${color})`} fill-rule="nonzero">
