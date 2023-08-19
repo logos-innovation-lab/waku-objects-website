@@ -1,150 +1,180 @@
 <script lang="ts">
-	import { goto } from '$app/navigation'
+	// Components
 	import Button from '$lib/components/button.svelte'
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
-	import LogoDiscord from '$lib/components/icons/logo-discord.svelte'
-	import LogoGithub from '$lib/components/icons/logo-github.svelte'
-	import LogoSketch from '$lib/components/icons/logo-sketch.svelte'
+	import Dropdown from '$lib/components/dropdown.svelte'
+	import WakuObject from '$lib/components/waku-object.svelte'
+	import DropdownItem from '$lib/components/dropdown-item.svelte'
 
 	// Icons
 	import WakuLogo from '$lib/components/icons/waku-logo.svelte'
-	import Object from '$lib/components/object.svelte'
+	import Menu from '$lib/components/icons/menu.svelte'
+	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
+	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
+	import LogoSplit from '$lib/components/icons/logo_split.svelte'
+	import LogoSwarmcity from '$lib/components/icons/logo_swarmcity.svelte'
+	import Launch from '$lib/components/icons/launch.svelte'
+	import ZoomIn from '$lib/components/icons/zoom-in.svelte'
 </script>
 
 <header>
-	<div class="logo">
-		<WakuLogo size={48} title="Waku brand logo" />
-		Waku Play
-	</div>
-	<nav class="nav-main" />
-</header>
-<div class="hero">
-	<Container>
-		<div class="content">
-			<div class="img">
-				<WakuLogo size={180} color="--color-step-20" />
-			</div>
-			<div class="text">
-				<h1>
-					Say
-					<span>hi</span>
-					to Waku Objects
-				</h1>
-				<p>
-					Waku is a decentralised messaging protocol. A Waku Object is a widget that can be added to
-					chat conversations. Chat members interact with Waku Objects to execute a specific
-					transactional cryptographic protocol.
-				</p>
-				<div class="buttons">
-					<Button
-						variant="strong"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-						>Launch app</Button
-					>
-
-					<!-- TODO: fix link -->
-					<!-- <Button on:click={() => window.open('https://kurate.vercel.app', '_blank')}
-						>Read the FAQ</Button
-					> -->
-				</div>
-			</div>
+	<Container
+		padX={48}
+		padY={48}
+		direction="row"
+		justify="space-between"
+		alignItems="center"
+		sticky="top"
+		wide={true}
+	>
+		<div class="logo">
+			<WakuLogo size={48} title="Waku brand logo" />
+			Waku Play
 		</div>
+		<nav class="nav-main">
+			<Dropdown>
+				<Button slot="button" variant="icon">
+					<Menu />
+				</Button>
+				<DropdownItem
+					onClick={() => {
+						console.log('waku objects')
+					}}
+				>
+					Waku Objects
+				</DropdownItem>
+				<DropdownItem
+					onClick={() => {
+						console.log('waku chat')
+					}}
+				>
+					Waku Chat
+				</DropdownItem>
+				<DropdownItem
+					onClick={() => {
+						console.log('design guidelines')
+					}}
+				>
+					Design Guidelines
+				</DropdownItem>
+				<DropdownItem
+					onClick={() => {
+						console.log('why waku play')
+					}}
+				>
+					Why Waku Play?
+				</DropdownItem>
+			</Dropdown>
+		</nav>
+	</Container>
+</header>
+<div class="intro">
+	<Container padY={0}>
+		<h1>
+			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>.
+			People in the chat interact with Waku Objects to execute specific transactional cryptographic
+			protocols, directly within the chat interface.
+		</h1>
+		<h2>
+			Waku Play is built on <a href="https://waku.org/" target="_blank">Waku</a> — a decentralised messaging
+			protocol.
+		</h2>
+	</Container>
+	<Container>
+		<Divider padTop={48} />
 	</Container>
 </div>
 <div class="objects">
-	<Object name="SafeMeet" status="concept">
-		<svelte:fragment slot="description">
-			<p>
-				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
-				someone in real life can be an increasingly challenging task. GPS tracking, social media,
-				and surveillance cameras, make it easier for someone to be tracked or followed,
-				unintentionally compromising personal safety and privacy.
-			</p>
-			<p>
-				To address this concern, SafeMeet allows users to set up a meeting without revealing their
-				location until the last moment. It helps mitigate potential risks associated with online
-				interactions transitioning to real-world encounters.
-			</p>
-		</svelte:fragment>
-		<svelte:fragment slot="image">
-			<figure>
-				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
-			</figure>
-		</svelte:fragment>
-		<svelte:fragment slot="links">
-			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
-					><LogoGithub title="Github brand logo" /></a
-				>
-				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"
-					><LogoSketch title="Sketch brand logo" /></a
-				>
-				<span>Logos Innovation Lab</span>
-			</p>
-		</svelte:fragment>
-	</Object>
-	<Object name="Payggy" status="under development">
-		<svelte:fragment slot="description">
-			<p>
-				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
-				someone in real life can be an increasingly challenging task. GPS tracking, social media,
-				and surveillance cameras, make it easier for someone to be tracked or followed,
-				unintentionally compromising personal safety and privacy.
-			</p>
-			<p>
-				To address this concern, SafeMeet allows users to set up a meeting without revealing their
-				location until the last moment. It helps mitigate potential risks associated with online
-				interactions transitioning to real-world encounters.
-			</p>
-		</svelte:fragment>
-		<svelte:fragment slot="image">
-			<figure>
-				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
-			</figure>
-		</svelte:fragment>
-		<svelte:fragment slot="links">
-			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
-					><LogoGithub title="Github brand logo" /></a
-				>
-				<a href="https://discord.gg/npkeT33a"><LogoDiscord title="Discord brand logo" /></a>
-				<span>Logos Innovation Lab</span>
-			</p>
-		</svelte:fragment>
-	</Object>
-	<Object name="SafeMeet" status="concept">
-		<svelte:fragment slot="description">
-			<p>
-				In today's digitally connected world, maintaining privacy and anonymity while trying to meet
-				someone in real life can be an increasingly challenging task. GPS tracking, social media,
-				and surveillance cameras, make it easier for someone to be tracked or followed,
-				unintentionally compromising personal safety and privacy.
-			</p>
-			<p>
-				To address this concern, SafeMeet allows users to set up a meeting without revealing their
-				location until the last moment. It helps mitigate potential risks associated with online
-				interactions transitioning to real-world encounters.
-			</p>
-		</svelte:fragment>
-		<svelte:fragment slot="image">
-			<figure>
-				<img src="https://picsum.photos/500/700" alt="Payggy object screenshot" />
-			</figure>
-		</svelte:fragment>
-		<svelte:fragment slot="links">
-			<p>
-				<a href="https://github.com/logos-innovation-lab/waku-objects-playground"
-					><LogoGithub title="Github brand logo" /></a
-				>
-				<a href="https://www.sketch.com/s/288cf5cf-ed53-4c43-bfb9-88d783cb3d22"
-					><LogoSketch title="Sketch brand logo" /></a
-				>
-				<span>Logos Innovation Lab</span>
-			</p>
-		</svelte:fragment>
-	</Object>
+	<Container padY={48}>
+		<h3>Waku Objects</h3>
+		<div class="grid">
+			<WakuObject name="Payggy" bgColor="#91ff76">
+				<LogoPayggy title="Payggy object logo" slot="image" color="#0065CC" />
+
+				<svelte:fragment slot="description">
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+				</svelte:fragment>
+				<svelte:fragment slot="buttons">
+					<Button
+						variant="strong"
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<Launch />
+						Try Payggy
+					</Button>
+					<Button
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<ZoomIn />
+						Learn more
+					</Button>
+				</svelte:fragment>
+			</WakuObject>
+			<WakuObject name="SafeMeet" bgColor="var(--color-ultraHigh)">
+				<LogoSafemeet title="SafeMeet object logo" slot="image" color="#FF6128" />
+				<svelte:fragment slot="description">
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+				</svelte:fragment>
+				<svelte:fragment slot="buttons">
+					<Button
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<ZoomIn />
+						Learn more
+					</Button>
+				</svelte:fragment>
+			</WakuObject>
+			<WakuObject name="Split" bgColor="#0065CC">
+				<LogoSplit title="Split object logo" slot="image" />
+				<svelte:fragment slot="description">
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+				</svelte:fragment>
+				<svelte:fragment slot="buttons">
+					<Button
+						variant="strong"
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<Launch />
+						Try Split
+					</Button>
+					<Button
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<ZoomIn />
+						Learn more
+					</Button>
+				</svelte:fragment>
+			</WakuObject>
+			<WakuObject name="Swarm City" bgColor="#FEEA16">
+				<LogoSwarmcity title="Swarm City object logo" slot="image" />
+				<svelte:fragment slot="description">
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+				</svelte:fragment>
+				<svelte:fragment slot="buttons">
+					<Button
+						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+					>
+						<ZoomIn />
+						Learn more
+					</Button>
+				</svelte:fragment>
+			</WakuObject>
+		</div>
+	</Container>
 </div>
 <div class="why">
 	<Container>
@@ -228,185 +258,28 @@
 		<p>Logos Innovation Lab boilerplate</p>
 	</Container>
 </div>
-<!-- <Container>
-	<div class="cols">
-		<div class="col">
-			<h3>A Persona is a group identity</h3>
-			<p>
-				In Kurate you and your peers remain private but post content publicly as a group identity
-				called a Persona. Each Persona has its own characteristics and culture based on the people
-				posting through it.
-			</p>
-		</div>
-		<div class="col">
-			<h3>A Persona is curated together</h3>
-			<p>
-				When a post is submitted, the community votes on whether or not the post is appropriate for
-				the Persona's character. The result is a curated stream of community-generated content.
-			</p>
-		</div>
-		<div class="col">
-			<h3>A Persona gives privacy</h3>
-			<p>
-				Posting content through a Persona allows your voice to be heard while you remain anonymous.
-				But it's not a free-for-all since the community votes on whether or not each post is in
-				character.
-			</p>
-		</div>
-	</div>
-</Container>
-<hr />
-<Container>
-	<div class="intro">
-		<h2>
-			Imagine posting as <span>Satoshi Nakamoto's</span> online Persona. What would you say?
-		</h2>
-		<div class="subtitle">
-			In Kurate a Persona's character is developed by you and your peers, anonymously creating
-			content together.
-		</div>
-	</div>
-	<div class="cols">
-		<div class="col">
-			<h3>Post in character</h3>
-			<p>
-				Choose a Persona that speaks to you. Read the posts and think about the type of content that
-				represents the Persona. Once you get a feel for it, submit your own post for peer review.
-			</p>
-		</div>
-		<div class="col">
-			<h3>Curate in character</h3>
-			<p>
-				Every post submitted to a Persona goes through a curation process, where peers vote on
-				whether to promote or demote the post. You vote on your peers' posts too, developing the
-				Persona as a community.
-			</p>
-		</div>
-		<div class="col">
-			<h3>Develop your character</h3>
-			<p>
-				Earn reputation (REP) when your peers vote to promote your posts. You also earn REP by
-				voting on posts in the direction of the community. The higher your REP, the more you are
-				able to do in Kurate.
-			</p>
-		</div>
-	</div>
-	<div class="buttons">
-		<a
-			href="https://kurate-faq.vercel.app/persona/what-is-a-persona"
-			target="_blank"
-			class="button secondary"
-		>
-			Learn more about Personas
-		</a>
-	</div>
-</Container>
-<hr />
-<Container>
-	<div class="intro">
-		<h2>
-			Anonymity and peer-earned reputation combine to empower people to have authentic discourse,
-			building community trust.
-		</h2>
-	</div>
-	<div class="cols">
-		<div class="col">
-			<h3>Be empowered</h3>
-			<p>
-				In Kurate your identity is private, so you no longer need to fear professional or personal
-				repercussions for simply expressing yourself. Speak freely and earn reputation when the
-				community agrees that what you have to say is relevant.
-			</p>
-		</div>
-		<div class="col">
-			<h3>Be authentic</h3>
-			<p>
-				Anonymity grants people the freedom to speak honestly—from the heart. This leads to a more
-				authentic public discourse because unlike other social media, community members are not
-				incentivized to self-censor.
-			</p>
-		</div>
-		<div class="col">
-			<h3>Be accountable</h3>
-			<p>
-				You earn reputation when your peers agree that content you post is relevant, and you curate
-				their content as well. This dynamic allows everyone to remain anonymous but also accountable
-				for their actions, building community trust together.
-			</p>
-		</div>
-	</div>
-	<div class="buttons">
-		<a
-			href="https://kurate-faq.vercel.app/overview/why-anonymous-reputation"
-			target="_blank"
-			class="button secondary"
-		>
-			Learn more about private reputation
-		</a>
-	</div>
-</Container>
-<hr />
-<section class="container" id="trynow">
-	<div class="intro">
-		<h2>Try Kurate by connecting your web3 wallet.</h2>
-		<div class="buttons">
-			<a href="https://kurate.vercel.app/" target="_blank" class="button primary"> Launch app </a>
-			<a href="https://kurate-faq.vercel.app/" target="_blank" class="button secondary">
-				Read the FAQ
-			</a>
-		</div>
-	</div>
-</section> -->
 <Footer />
 
 <style lang="scss">
-	.hero {
-		color: var(--color-body-body);
+	.logo {
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		gap: var(--spacing-12);
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-700);
+	}
 
-		.content {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: var(--spacing-24);
-
-			@media (min-width: 1242px) {
-				flex-direction: row;
-			}
-
-			.text {
-				display: flex;
-				flex-direction: column;
-				gap: var(--spacing-6);
-				order: 2;
-				text-align: center;
-
-				h1 {
-					span {
-						font-family: var(--font-serif);
-						font-style: italic;
-					}
-				}
-
-				p {
-					font-size: 24px;
-				}
-
-				.buttons {
-					justify-content: center;
-					margin-top: var(--spacing-48);
-				}
-			}
-
-			.img {
-				order: 1;
-
-				// img {
-				// 	max-height: 508px;
-				// }
-			}
+	.intro {
+		h1 {
+			margin-bottom: var(--spacing-24);
 		}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		column-gap: var(--spacing-48);
+		row-gap: var(--spacing-48);
 	}
 </style>

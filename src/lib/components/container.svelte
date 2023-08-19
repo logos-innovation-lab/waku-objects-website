@@ -8,12 +8,13 @@
 	export let sticky: 'top' | 'bottom' | 'none' = 'none'
 	export let padX = 12
 	export let padY = 12
+	export let wide = false
 </script>
 
 <div
 	class={`container text-${align} items-${alignItems} ${
 		sticky !== 'none' ? 'sticky-' + { sticky } : ''
-	} ${direction} ${justify} ${grow ? 'grow' : ''}`}
+	} ${direction} ${justify} ${grow ? 'grow' : ''} ${wide ? 'wide' : ''}`}
 	style={`gap: ${gap}px; padding-inline: ${padX}px; padding-block: ${padY}px;`}
 >
 	<slot />
@@ -25,8 +26,12 @@
 		justify-content: flex-start;
 		width: 100%;
 		flex-grow: 0;
-		max-width: var(--max-width);
+		max-width: var(--content-width);
 		margin-inline: auto;
+
+		&.wide {
+			max-width: var(--max-width);
+		}
 	}
 
 	.sticky-top,
