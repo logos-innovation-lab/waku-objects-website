@@ -31,10 +31,10 @@
 <style lang="scss">
 	footer {
 		background-color: var(--color-accent);
-		color: var(--color-step-20);
+		color: var(--color-high);
 
 		a {
-			color: var(--color-step-20);
+			color: var(--color-high);
 		}
 	}
 </style>

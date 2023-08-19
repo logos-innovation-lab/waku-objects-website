@@ -1,11 +1,16 @@
 <script lang="ts">
 	export let variant: '' | 'icon' | 'strong' | 'account' = ''
 	export let disabled: boolean | undefined = undefined
-	export let align: 'center' | 'left' | 'right' | 'block' = 'center'
 	export let grow = false
+	export let active = false
 </script>
 
-<button type="button" {disabled} class={`${variant} ${align} ${grow ? 'grow' : ''}`} on:click>
+<button
+	type="button"
+	{disabled}
+	class={`${variant} ${grow ? 'grow' : ''} ${active ? 'active' : ''}`}
+	on:click
+>
 	{#if variant === 'account'}
 		<div class="avatar">
 			<slot name="avatar" />
@@ -17,9 +22,9 @@
 <style lang="scss">
 	button {
 		background: var(--transparent);
-		border: 1px solid var(--color-step-20, var(--color-dark-step-40));
+		border: 1px solid var(--color-low);
 		border-radius: var(--border-radius);
-		color: var(--color-step-50, var(--color-dark-step-10));
+		color: var(--color-ultrahigh);
 		font-size: var(--font-size-normal);
 		font-weight: var(--font-weight-500);
 		line-height: 1.25;
@@ -34,37 +39,22 @@
 		gap: var(--spacing-6);
 		white-space: nowrap;
 
-		&.block {
-			margin: 0;
-		}
-
-		&.center {
-			margin-inline: auto;
-		}
-
-		&.left {
-			margin-left: 0;
-		}
-
-		&.right {
-			margin-right: 0;
-		}
-
 		&.grow {
 			width: 100%;
 			justify-content: space-between;
 		}
 
-		&:active {
-			background-color: var(--color-step-20, var(--color-dark-step-40));
+		&:active,
+		&.active {
+			background-color: var(--color-low);
 		}
 
 		&:disabled {
 			cursor: not-allowed;
-			color: var(--color-step-30, var(--color-dark-step-30));
+			color: var(--color-mid);
 
 			& :global(svg) {
-				fill: var(--color-step-30, var(--color-dark-step-30));
+				fill: var(--color-mid);
 			}
 		}
 
@@ -78,44 +68,31 @@
 		}
 
 		&.strong {
-			background-color: var(--color-step-50, var(--color-dark-step-10));
-			color: var(--color-step-10, var(--color-dark-step-50));
+			background-color: var(--color-ultraHigh);
+			color: var(--color-ultraLow);
 
 			:global(svg) {
-				fill: var(--color-step-10, var(--color-dark-step-50));
+				fill: var(--color-ultraLow);
 				width: 20px;
 				height: 20px;
 			}
 
 			&:active {
-				background-color: var(--color-accent, var(--color-dark-base));
+				background-color: var(--color-accent);
 				:global(svg) {
-					fill: var(--color-base, var(--color-dark-accent));
+					fill: var(--color-base);
 					width: 20px;
 					height: 20px;
 				}
 			}
 
 			&:disabled {
-				background-color: rgba(var(--color-step-50-rgb, var(--color-dark-step-10-rgb)), 0.25);
+				background-color: rgba(var(--color-ultraHigh-rgb), 0.25);
 			}
 		}
 
-		&.center {
-			margin-inline: auto;
-		}
-
-		&.left {
-			margin-left: 0;
-			margin-right: auto;
-		}
-
-		&.right {
-			margin-left: auto;
-			margin-right: 0;
-		}
 		&.border {
-			border: 1px solid var(--color-step-20, var(--color-dark-step-40));
+			border: 1px solid var(--color-low);
 		}
 
 		&.account {
