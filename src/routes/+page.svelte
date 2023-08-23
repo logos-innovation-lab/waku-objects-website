@@ -13,64 +13,56 @@
 	import Menu from '$lib/components/icons/menu.svelte'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
 	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
-	import LogoSplit from '$lib/components/icons/logo_split.svelte'
-	import LogoSwarmcity from '$lib/components/icons/logo_swarmcity.svelte'
+	import LogoSplit from '$lib/components/icons/logo-split.svelte'
+	import LogoSwarmcity from '$lib/components/icons/logo-swarmcity.svelte'
 	import Launch from '$lib/components/icons/launch.svelte'
 	import ZoomIn from '$lib/components/icons/zoom-in.svelte'
+	import Header from '$lib/components/header.svelte'
+
+	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
-<header>
-	<Container
-		padX={48}
-		padY={48}
-		direction="row"
-		justify="space-between"
-		alignItems="center"
-		sticky="top"
-		wide={true}
-	>
-		<div class="logo">
-			<WakuLogo size={48} title="Waku brand logo" />
-			Waku Play
-		</div>
-		<nav class="nav-main">
-			<Dropdown>
-				<Button slot="button" variant="icon">
-					<Menu />
-				</Button>
-				<DropdownItem
-					onClick={() => {
-						console.log('waku objects')
-					}}
-				>
-					Waku Objects
-				</DropdownItem>
-				<DropdownItem
-					onClick={() => {
-						console.log('waku chat')
-					}}
-				>
-					Waku Chat
-				</DropdownItem>
-				<DropdownItem
-					onClick={() => {
-						console.log('design guidelines')
-					}}
-				>
-					Design Guidelines
-				</DropdownItem>
-				<DropdownItem
-					onClick={() => {
-						console.log('why waku play')
-					}}
-				>
-					Why Waku Play?
-				</DropdownItem>
-			</Dropdown>
-		</nav>
-	</Container>
-</header>
-<div class="intro">
+<Header title="Waku Play">
+	<svelte:fragment slot="icon">
+		<WakuLogo size={48} title="Waku brand logo" />
+	</svelte:fragment>
+	<svelte:fragment slot="nav">
+		<Dropdown>
+			<Button slot="button" variant="icon">
+				<Menu />
+			</Button>
+			<DropdownItem
+				onClick={() => {
+					scroll(document.querySelector('#objects'))
+				}}
+			>
+				Waku Objects
+			</DropdownItem>
+			<DropdownItem
+				onClick={() => {
+					scroll(document.querySelector('#chat'))
+				}}
+			>
+				Waku Chat
+			</DropdownItem>
+			<DropdownItem
+				onClick={() => {
+					scroll(document.querySelector('#guidelines'))
+				}}
+			>
+				Design Guidelines
+			</DropdownItem>
+			<DropdownItem
+				onClick={() => {
+					scroll(document.querySelector('#why'))
+				}}
+			>
+				Why Waku Play?
+			</DropdownItem>
+		</Dropdown>
+	</svelte:fragment>
+</Header>
+<section id="intro">
 	<Container padY={0}>
 		<h1>
 			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>.
@@ -82,13 +74,13 @@
 			protocol.
 		</h2>
 	</Container>
-	<Container>
-		<Divider padTop={48} />
-	</Container>
-</div>
-<div class="objects">
+</section>
+<Container padY={0}>
+	<Divider padTop={48} />
+</Container>
+<section id="objects">
 	<Container padY={48}>
-		<h3>Waku Objects</h3>
+		<h3 class="section-title">Waku Objects</h3>
 		<div class="grid">
 			<WakuObject name="Payggy" bgColor="#91ff76">
 				<LogoPayggy title="Payggy object logo" slot="image" color="#0065CC" />
@@ -100,16 +92,14 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button
+					<!-- <Button
 						variant="strong"
 						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
 					>
 						<Launch />
 						Try Payggy
-					</Button>
-					<Button
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
+					</Button> -->
+					<Button on:click={() => (window.location.href = '/payggy')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -124,16 +114,14 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
+					<Button on:click={() => (window.location.href = '/safemeet')}>
 						<ZoomIn />
 						Learn more
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Split" bgColor="#0065CC">
-				<LogoSplit title="Split object logo" slot="image" />
+			<WakuObject name="Splitter" bgColor="#0065CC">
+				<LogoSplit title="Splitter object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
 						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
@@ -141,16 +129,14 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button
+					<!-- <Button
 						variant="strong"
 						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
 					>
 						<Launch />
 						Try Split
-					</Button>
-					<Button
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
+					</Button> -->
+					<Button on:click={() => (window.location.href = '/splitter')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -165,9 +151,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
+					<Button on:click={() => (window.location.href = '/swarm-city')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -175,101 +159,151 @@
 			</WakuObject>
 		</div>
 	</Container>
-</div>
-<div class="why">
-	<Container>
-		<h2>Why Waku Objects?</h2>
-		<p>
-			The concept of a "chat app to rule them all" refers to an all-encompassing, feature-rich
-			messaging application that provides a wide range of services and functionalities beyond just
-			text messaging. WeChat is a prime example of such an app, especially popular in China, where
-			it has become a central part of people's lives. It goes beyond simple messaging, offering
-			features such as social networking, mobile payments, gaming, shopping, and various other
-			services, making it an indispensable platform for many users.
-		</p>
-		<p>
-			While these super apps have undoubtedly revolutionized the way we communicate and interact
-			online, they raise concerns about data privacy, user surveillance, and the centralized control
-			of user data by corporations and states. Many users have become increasingly cautious about
-			their digital footprints and the potential misuse of their personal information.
-		</p>
-		<p>
-			Waku Objects aims to be a starting point for a concerted effort from both developers and users
-			who value privacy, decentralization, and openness. With time, effort, and support, a
-			decentralized and open chat app could emerge as a formidable competitor to the existing
-			corporate behemoths.
-		</p>
-		<h3>Data Privacy and Security</h3>
-		<p>
-			In centralized chat apps, user data is stored on servers controlled by a company, making it
-			susceptible to data breaches and surveillance by states. An open, distributed alternative
-			employs end-to-end encryption and decentralized storage, giving users more control over their
-			data and enhancing security.
-		</p>
-		<h3>Avoiding Vendor Lock-in</h3>
-		<p>
-			With proprietary chat apps, users are tied to a specific ecosystem, limiting their freedom to
-			switch between platforms. An open alternative ensures interoperability and allows users to
-			communicate across different platforms seamlessly.
-		</p>
-		<h3>Community-Driven Development:</h3>
-		<p>
-			A decentralized and open platform fostering a community of developers who can contribute to
-			its improvement and ensure that it serves the needs and interests of its users, rather than
-			being driven solely by profit motives.
-		</p>
-		<h3>Global Accessibility</h3>
-		<p>
-			Accessible to users worldwide, including those in regions where certain corporate apps might
-			be restricted or inaccessible.
-		</p>
-		<h3>Innovation and Customization:</h3>
-		<p>
-			Encouraging innovation and customization, allowing developers to create new features and
-			extensions that suit their needs and preferences.
-		</p>
+</section>
+<Container padY={0}>
+	<Divider />
+</Container>
+<section id="chat">
+	<Container padY={48}>
+		<h3 class="section-title">Waku Chat</h3>
+		<div class="grid">
+			<div class="img" />
+			<div class="content">
+				<Container padX={0} padY={0} gap={12}>
+					<p>
+						A simple chat application built on Waku. Vice echo park kinfolk shoreditch, lumbersexual
+						typewriter taxidermy gastropub irony.
+					</p>
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
+						<Button
+							variant="strong"
+							on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+						>
+							<Launch />
+							Try Waku Chat
+						</Button>
+						<Button on:click={() => (window.location.href = '/waku-chat')}>
+							<ZoomIn />
+							Learn more
+						</Button>
+					</Container>
+				</Container>
+			</div>
+		</div>
 	</Container>
-</div>
-<Divider />
-<div class="how">
-	<Container>
-		<h2>How does it work?</h2>
-		<ul>
-			<li>Explain the system</li>
-			<li>A bit about waku</li>
-			<li>Waku Objects; how is it build, how to use it, how to make one yourself.</li>
-			<li>Implementation details</li>
-			<li>Design system</li>
-			<li>Protocol (link to md)</li>
-		</ul>
+</section>
+<Container padY={0}>
+	<Divider />
+</Container>
+<section id="guidelines">
+	<Container padY={48}>
+		<h3 class="section-title">Design Guidelines</h3>
+		<div class="grid">
+			<div class="content">
+				<Container padX={0} padY={0} gap={12}>
+					<p>
+						A simple chat application built on Waku. Vice echo park kinfolk shoreditch, lumbersexual
+						typewriter taxidermy gastropub irony.
+					</p>
+					<p>
+						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
+						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+					</p>
+					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
+						<Button variant="strong" on:click={() => (window.location.href = '/learn')}>
+							<Launch />
+							Learn how to build
+						</Button>
+					</Container>
+				</Container>
+			</div>
+			<div class="img" />
+		</div>
 	</Container>
-</div>
-<Divider />
-<div class="use">
-	<Container>
-		<h2>How can I use this in my app?</h2>
-		<p>Check out the Sandbox and play with it or read the docs</p>
+</section>
+<Container padY={0}>
+	<Divider />
+</Container>
+<section id="why">
+	<Container padY={48}>
+		<h3 class="section-title">Why Waku Play?</h3>
+		<div class="intro">
+			<p>
+				The concept of a "chat app to rule them all" refers to an all-encompassing, feature-rich
+				messaging application that provides a wide range of services and functionalities beyond just
+				text messaging. WeChat is a prime example of such an app, especially popular in China, where
+				it has become a central part of people's lives. It goes beyond simple messaging, offering
+				features such as social networking, mobile payments, gaming, shopping, and various other
+				services, making it an indispensable platform for many users.
+			</p>
+			<p>
+				While these super apps have undoubtedly revolutionized the way we communicate and interact
+				online, they raise concerns about data privacy, user surveillance, and the centralized
+				control of user data by corporations and states. Many users have become increasingly
+				cautious about their digital footprints and the potential misuse of their personal
+				information.
+			</p>
+			<p>
+				Waku Objects aims to be a starting point for a concerted effort from both developers and
+				users who value privacy, decentralization, and openness. With time, effort, and support, a
+				decentralized and open chat app could emerge as a formidable competitor to the existing
+				corporate behemoths.
+			</p>
+		</div>
+		<div class="grid">
+			<div>
+				<h3>Data Privacy and Security</h3>
+				<p>
+					In centralized chat apps, user data is stored on servers controlled by a company, making
+					it susceptible to data breaches and surveillance by states. An open, distributed
+					alternative employs end-to-end encryption and decentralized storage, giving users more
+					control over their data and enhancing security.
+				</p>
+			</div>
+			<div>
+				<h3>Avoiding Vendor Lock-in</h3>
+				<p>
+					With proprietary chat apps, users are tied to a specific ecosystem, limiting their freedom
+					to switch between platforms. An open alternative ensures interoperability and allows users
+					to communicate across different platforms seamlessly.
+				</p>
+			</div>
+			<div>
+				<h3>Community-Driven Development:</h3>
+				<p>
+					A decentralized and open platform fostering a community of developers who can contribute
+					to its improvement and ensure that it serves the needs and interests of its users, rather
+					than being driven solely by profit motives.
+				</p>
+			</div>
+			<div>
+				<h3>Global Accessibility</h3>
+				<p>
+					Accessible to users worldwide, including those in regions where certain corporate apps
+					might be restricted or inaccessible.
+				</p>
+			</div>
+			<div>
+				<h3>Innovation and Customization:</h3>
+				<p>
+					Encouraging innovation and customization, allowing developers to create new features and
+					extensions that suit their needs and preferences.
+				</p>
+			</div>
+		</div>
 	</Container>
-</div>
-<Divider />
-<div class="who">
-	<Container>
-		<h2>Who made this?</h2>
-		<p>Logos Innovation Lab boilerplate</p>
-	</Container>
-</div>
+</section>
 <Footer />
 
 <style lang="scss">
-	.logo {
-		display: flex;
-		align-items: center;
-		gap: var(--spacing-12);
-		font-size: var(--font-size-lg);
-		font-weight: var(--font-weight-700);
+	:root {
+		scroll-behavior: smooth;
 	}
-
-	.intro {
+	#intro {
 		h1 {
 			margin-bottom: var(--spacing-24);
 		}
@@ -277,9 +311,66 @@
 
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		column-gap: var(--spacing-48);
-		row-gap: var(--spacing-48);
+		gap: var(--spacing-48) var(--spacing-48);
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+		.img {
+			background-size: cover;
+			background-position: center center;
+			aspect-ratio: 4/3;
+		}
+		.content {
+			p {
+				&:first-child {
+					font-size: var(--font-size-lg);
+				}
+			}
+		}
+	}
+
+	#chat {
+		.img {
+			background-image: url('/images/waku_play_cover.svg');
+		}
+	}
+
+	#guidelines {
+		@media (max-width: 711px) {
+			div:nth-of-type(1) {
+				order: 2;
+			}
+			div:nth-of-type(2) {
+				order: 1;
+			}
+		}
+
+		.img {
+			background-image: url('/images/ui_guidelines_cover.svg');
+		}
+	}
+
+	.section-title {
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-700);
+		margin-bottom: var(--spacing-48);
+	}
+
+	#why {
+		.intro {
+			margin-bottom: var(--spacing-48);
+			p {
+				font-size: var(--font-size-lg);
+				line-height: 1.333;
+
+				&:not(:last-child) {
+					margin-bottom: var(--spacing-24);
+				}
+
+				@media (min-width: 414px) {
+					font-size: 24px;
+					line-height: 1.25;
+				}
+			}
+		}
 	}
 </style>

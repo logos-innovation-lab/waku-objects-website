@@ -13,7 +13,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	width={size * 0.7889}
 	height={size}
-	viewBox="0 0 96 83.198"
+	viewBox="0 0 76 96"
 >
 	<title>{title}</title>
 	<path
