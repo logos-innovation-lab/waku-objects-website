@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let variant: '' | 'icon' | 'strong' | 'account' = ''
+	export let variant: '' | 'icon' | 'strong' | 'subtle' = ''
 	export let disabled: boolean | undefined = undefined
 	export let grow = false
 	export let active = false
@@ -8,14 +8,9 @@
 <button
 	type="button"
 	{disabled}
-	class={`${variant} ${grow ? 'grow' : ''} ${active ? 'active' : ''}`}
+	class={`${variant} ${grow ? 'grow' : ''} ${active ? 'active' : ''} `}
 	on:click
 >
-	{#if variant === 'account'}
-		<div class="avatar">
-			<slot name="avatar" />
-		</div>
-	{/if}
 	<slot />
 </button>
 
@@ -95,22 +90,8 @@
 			border: 1px solid var(--color-low);
 		}
 
-		&.account {
-			padding-left: 64px;
-			position: relative;
-			height: 48px;
-
-			.avatar {
-				position: absolute;
-				inset: 0 auto 0 0;
-				border-radius: var(--border-radius);
-				overflow: hidden;
-
-				:global(img) {
-					width: 48px;
-					height: 48px;
-				}
-			}
+		&.subtle {
+			background-color: var(--color-ultraLow);
 		}
 	}
 </style>
