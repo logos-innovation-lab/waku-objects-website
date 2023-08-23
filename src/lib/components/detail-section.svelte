@@ -1,30 +1,57 @@
 <script lang="ts">
-	import Container from './container.svelte'
-	import Button from './button.svelte'
-	import ZoomIn from './icons/zoom-in.svelte'
-	import Divider from './divider.svelte'
+	import Container from '$lib/components/container.svelte'
+	import Divider from '$lib/components/divider.svelte'
+	import { Lightbox, LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox'
 
 	export let title: string | undefined = undefined
 	export let sub: boolean | undefined = false
+	export let section: string | undefined
+
+	const imgObj = import.meta.glob('/static/images/screens/*.png')
+	const imgArray = Object.values(imgObj)
+	const imgs = imgArray.map((img) => {
+		return img.name
+	})
 </script>
 
 <div class={`section-wrapper ${sub ? 'sub' : ''}`}>
 	<div class="section-intro">
 		<Container padX={0} padY={48} gap={12}>
 			<h3 class={`section-title ${sub ? 'sub' : ''}`}>{title}</h3>
-			<slot />
+			<slot name="description" />
 		</Container>
 	</div>
+	{#if section}
+		<div class="imgs-wrap">
+			<div class="imgs">
+				<LightboxGallery title="Payggy Identity">
+					<svelte:fragment slot="thumbnail">
+						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/WakuChat_S${section}`), ) as img, i}
+							<GalleryThumbnail id={i}>
+								<img src={`/images/screens/WakuChat_S${section}I0${i + 1}.png`} alt="" />
+							</GalleryThumbnail>
+						{/each}
+					</svelte:fragment>
+					{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/WakuChat_S${section}`), ) as img, i}
+						<GalleryImage id={i}>
+							<img src={`/images/screens/WakuChat_S${section}I0${i + 1}.png`} alt="" />
+						</GalleryImage>
+					{/each}
+				</LightboxGallery>
 
-	<div class="imgs-wrap">
-		<div class="imgs">
-			<slot name="images" />
+				<!-- <Lightbox
+			enableFallbackThumbnail={false}
+			bind:programmaticController={lightboxProgrammaticController}
+			description="Payggy Identity Lightbox"
+		>
+			<Button variant="subtle">
+				<ZoomIn />
+				View Details
+			</Button>
+		</Lightbox> -->
+			</div>
 		</div>
-		<Button variant="subtle">
-			<ZoomIn />
-			View Details
-		</Button>
-	</div>
+	{/if}
 </div>
 {#if !sub}
 	<Divider short />
@@ -67,7 +94,14 @@
 		gap: var(--spacing-24);
 
 		:global(img) {
-			max-width: 207px;
+			max-height: 448px;
 		}
 	}
+	:global(div.svelte-lightbox-footer) {
+		display: none;
+	}
+
+	// :global(button.next-button){
+
+	// }
 </style>
