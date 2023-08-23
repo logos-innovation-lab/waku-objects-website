@@ -159,19 +159,3 @@ h3 {
 	font-weight: 700;
 }
 
-/* section {
-	padding: var(--spacing-24);
-	display: flex;
-	gap: var(--spacing-24);
-	flex-direction: column;
-
-	.section-header {
-		margin-bottom: 48px;
-	}
-
-	&#trynow {
-		.buttons {
-			margin-top: 36px;
-		}
-	}
-} */
