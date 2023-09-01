@@ -1,4 +1,4 @@
-export function scroll(selector: HTMLElement | null){
+export function scroll(selector: HTMLElement | null) {
 	let offset = document.querySelector('header')?.clientHeight ?? 144
 	if (selector) {
 		window.scrollTo({
