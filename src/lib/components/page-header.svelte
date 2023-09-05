@@ -3,15 +3,20 @@
 	import Divider from './divider.svelte'
 
 	export let bgImage: string | undefined = undefined
+	export let bgColor: string | undefined = undefined
 </script>
 
-<div class="page-header">
-	<Container padX={0} padY={0}>
-		{#if $$slots.image}
+{#if $$slots.image}
+	<div style={`${bgColor ? 'background-color: ' + bgColor + ';' : null}`}>
+		<Container padY={0} padX={0} wide>
 			<div class="img" style={`${bgImage ? 'background-image: url("' + bgImage + '"");' : ''}`}>
 				<slot name="image" />
 			</div>
-		{/if}
+		</Container>
+	</div>
+{/if}
+<div class="page-header">
+	<Container padX={0} padY={0}>
 		<div class="content">
 			<slot name="first" />
 			<slot name="second" />
@@ -27,12 +32,13 @@
 
 <style lang="scss">
 	.page-header {
-		max-width: 498px;
+		max-width: var(--detail-width);
 		margin-inline: auto;
 	}
 	.img {
 		width: 100%;
-		aspect-ratio: 4/3;
+		// aspect-ratio: 4/3;
+		max-height: 374px;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;

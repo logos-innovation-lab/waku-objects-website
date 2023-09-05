@@ -20,6 +20,9 @@
 	import Header from '$lib/components/header.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
+	import { theme } from '$lib/theme'
+
+	$theme = 'home'
 </script>
 
 <Header title="Waku Play">
