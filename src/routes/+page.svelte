@@ -65,12 +65,13 @@
 <section id="intro">
 	<Container padY={0}>
 		<h1>
-			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>.
-			People in the chat interact with Waku Objects to execute specific transactional cryptographic
-			protocols, directly within the chat interface.
+			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>. Chat
+			members interact with Waku Objects to execute specific transactional cryptographic protocols,
+			directly within the chat interface.
 		</h1>
 		<h2>
-			Waku Play is built on <a href="https://waku.org/" target="_blank">Waku</a> — a decentralised messaging
+			Waku Play is open source and free. It is decentralised, privacy preserving and censorship
+			resistant. Built on <a href="https://waku.org/" target="_blank">Waku</a> — a decentralised messaging
 			protocol.
 		</h2>
 	</Container>
@@ -87,8 +88,8 @@
 
 				<svelte:fragment slot="description">
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						Payggy is a Waku Object you can use to send money (any ERC20, ETH) to your friends. It
+						can be used in both group chat and direct messages.
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
@@ -109,8 +110,9 @@
 				<LogoSafemeet title="SafeMeet object logo" slot="image" color="#FF6128" />
 				<svelte:fragment slot="description">
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						With SafeMeet, two people can meet each other in the real world without having to worry
+						about their privacy or safety. SafeMeet follows a specific security protocol and guides
+						you every step of the way.
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
@@ -124,8 +126,8 @@
 				<LogoSplit title="Splitter object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						Share expenses with a group of friends - with Splitter you can add expenses, or settle
+						what you owe at any time.
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
@@ -146,8 +148,9 @@
 				<LogoSwarmcity title="Swarm City object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						Whatever you need, whenever you need it: ask for it in a group chat, users can respond
+						with their offer. Choose a provider, use the escrow functionality and successfully trade
+						goods and services while gaining Swarm.city reputation.
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
@@ -171,12 +174,13 @@
 			<div class="content">
 				<Container padX={0} padY={0} gap={12}>
 					<p>
-						A simple chat application built on Waku. Vice echo park kinfolk shoreditch, lumbersexual
-						typewriter taxidermy gastropub irony.
+						A simple chat application built on Waku. Initially created as a sandbox for developing
+						Waku Objects.
 					</p>
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						Waku Chat is a decentralised, censorship resistant and private communication app, with a
+						built-in crypto wallet. Users enhance their private and group chats with small app
+						widgets called Waku Objects.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
 						<Button
@@ -206,12 +210,13 @@
 			<div class="content">
 				<Container padX={0} padY={0} gap={12}>
 					<p>
-						A simple chat application built on Waku. Vice echo park kinfolk shoreditch, lumbersexual
-						typewriter taxidermy gastropub irony.
+						Waku Play is an open source system, so anyone can create a Waku Object or fork Waku
+						Chat.
 					</p>
 					<p>
-						Vaporware authentic sartorial, humblebrag narwhal schlitz fanny pack copper mug
-						snackwave bitters before they sold out. Etsy VHS try-hard cliche.
+						Get started by cloning the repository for <a href="#">Waku Chat</a>, or dive into the
+						documentation and design guidelines. They exist to promote consistency in code and user
+						experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
 						<Button variant="strong" on:click={() => (window.location.href = '/learn')}>
