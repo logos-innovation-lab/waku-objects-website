@@ -20,9 +20,10 @@
 	import Header from '$lib/components/header.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
-	import { theme } from '$lib/theme'
 
-	$theme = 'home'
+	// import { theme } from '$lib/theme'
+
+	// $theme = 'home'
 </script>
 
 <Header title="Waku Play">
@@ -36,28 +37,28 @@
 			</Button>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#objects'))
+					scroll(document.querySelector('#objects'), true)
 				}}
 			>
 				Waku Objects
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#chat'))
+					scroll(document.querySelector('#chat'), true)
 				}}
 			>
 				Waku Chat
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#guidelines'))
+					scroll(document.querySelector('#guidelines'), true)
 				}}
 			>
 				Design Guidelines
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#why'))
+					scroll(document.querySelector('#why'), true)
 				}}
 			>
 				Why Waku Play?
@@ -217,6 +218,8 @@
 						Chat.
 					</p>
 					<p>
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- FIXME: ADD CORRECT LINK -->
 						Get started by cloning the repository for <a href="#">Waku Chat</a>, or dive into the
 						documentation and design guidelines. They exist to promote consistency in code and user
 						experience.

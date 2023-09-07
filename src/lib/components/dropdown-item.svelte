@@ -2,10 +2,13 @@
 	export let disabled = false
 	export let danger = false
 	export let onClick: () => unknown
+	export let sub: boolean | undefined = undefined
 </script>
 
 <li
-	class={`${$$props.class} ${disabled ? 'disabled' : ''} ${danger ? 'danger' : ''}`}
+	class={`${$$props.class} ${disabled ? 'disabled' : ''} ${danger ? 'danger' : ''} ${
+		sub ? 'sub' : ''
+	}`}
 	on:click={() => !disabled && onClick()}
 	on:keypress={() => !disabled && onClick()}
 	role="option"
@@ -41,8 +44,18 @@
 			cursor: not-allowed;
 		}
 
-		&:not(:last-child) {
-			border-bottom: 1px solid var(--color-low);
+		&.sub {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: var(--spacing-12);
+			:global(> div) {
+				padding-left: var(--spacing-24);
+			}
 		}
+
+		// &:not(:last-child) {
+		// 	border-bottom: 1px solid var(--color-low);
+		// }
 	}
 </style>

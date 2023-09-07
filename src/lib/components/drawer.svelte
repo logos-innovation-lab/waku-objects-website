@@ -2,20 +2,26 @@
 	// export let open = false
 </script>
 
-<div class="drawer">
-	<slot />
+<div class="drawer-content">
+	<div class="inner">
+		<slot />
+	</div>
 </div>
 
 <style lang="scss">
-	.drawer {
-		overflow-y: auto;
+	.drawer-content {
+		overflow: auto;
 		background-color: var(--color-base);
-		background-color: var(--color-low);
-		max-width: 368px;
-		width: 100%;
-		min-width: 320px;
+		width: 320px;
 		height: 100%;
 		border-right: var(--border);
-		padding: var(--spacing-48);
+		padding-inline: var(--spacing-48);
+		position: relative;
+	}
+	.inner {
+		position: fixed;
+		top: 0;
+		padding-block: var(--spacing-48);
+		width: calc(320px - calc(var(--spacing-48) * 2));
 	}
 </style>

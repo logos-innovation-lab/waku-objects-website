@@ -5,6 +5,7 @@
 	import Menu from './icons/menu.svelte'
 
 	import { fly } from 'svelte/transition'
+	import SidePanelClose from './icons/side-panel-close.svelte'
 
 	let open = true
 	let screenSize: number
@@ -22,7 +23,7 @@
 			<Drawer>
 				<slot name="sidebar" />
 				<Button variant="icon" on:click={() => (open = !open)}>
-					<Menu />
+					<SidePanelClose />
 				</Button>
 			</Drawer>
 		</div>
