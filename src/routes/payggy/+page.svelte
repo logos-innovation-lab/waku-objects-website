@@ -1,1 +1,190 @@
-<h1>Payggy (empty)</h1>
+<script lang="ts">
+	// Components
+	import Button from '$lib/components/button.svelte'
+	import Container from '$lib/components/container.svelte'
+	import Divider from '$lib/components/divider.svelte'
+	import Footer from '$lib/components/footer.svelte'
+	import PageHeader from '$lib/components/page-header.svelte'
+	import DetailSection from '$lib/components/detail-section.svelte'
+	import Layout from '$lib/components/layout.svelte'
+	import Collapse from '$lib/components/collapse.svelte'
+	import CollapseItem from '$lib/components/collapse-item.svelte'
+
+	// Icons
+	import Launch from '$lib/components/icons/launch.svelte'
+	import LogoGithub from '$lib/components/icons/logo-github.svelte'
+	import Calibrate from '$lib/components/icons/calibrate.svelte'
+
+	import { scroll } from '$lib/utils/pageScroll'
+	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
+</script>
+
+<Layout iconBg="#91FF76">
+	<LogoPayggy size={20} slot="icon" title="Payggy logo" />
+	<div slot="title">Payggy</div>
+	<svelte:fragment slot="content">
+		<Collapse>
+			<svelte:fragment slot="cl-header">Adding to Chat</svelte:fragment>
+			<svelte:fragment slot="cl-body">
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#add-to-chat'))
+					}}
+				>
+					Adding to Chat
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#add-details'))
+					}}
+				>
+					Setting payment details
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#add-summary'))
+					}}
+				>
+					Summary
+				</CollapseItem>
+			</svelte:fragment>
+		</Collapse>
+		<CollapseItem
+			main
+			onClick={() => {
+				scroll(document.querySelector('#in-chat-messages'))
+			}}
+		>
+			In-chat messages
+		</CollapseItem>
+		<Collapse>
+			<svelte:fragment slot="cl-header">Payggy full view</svelte:fragment>
+			<svelte:fragment slot="cl-body">
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#payggy-full-view'))
+					}}
+				>
+					Payggy full view
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#payggy-successful'))
+					}}
+				>
+					Successful transaction
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#payggy-failed'))
+					}}
+				>
+					Failed transaction
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#payggy-history'))
+					}}
+				>
+					Activity history
+				</CollapseItem>
+			</svelte:fragment>
+		</Collapse>
+	</svelte:fragment>
+	<PageHeader bgColor="#91FF76" slot="pageheader">
+		<LogoPayggy size={140} slot="image" />
+		<p slot="first">
+			Payggy is a Waku Object allowing to send money to chat members within Waku Chat.
+		</p>
+		<p slot="second">
+			This page is an in-depth presentation of Payggy. You can try the latest build on link or
+			contribute on Github. Payggy is released under MIT license.
+		</p>
+		<svelte:fragment slot="buttons">
+			<Button
+				variant="strong"
+				on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+			>
+				<Launch />
+				Try now
+			</Button>
+			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+				<LogoGithub />
+				Github
+			</Button>
+			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+				<Calibrate />
+				Design specs
+			</Button>
+		</svelte:fragment>
+	</PageHeader>
+	<section id="add-to-chat">
+		<DetailSection title="Adding to Chat" section="01" imgPattern="PayggyS">
+			<p slot="description">
+				A new Payggy instance can be added to any chat by using the “+” button, close the message
+				input. In a private chat, the recipient is the other person in the chat. If Payggy is
+				inserted in a group chat, the next step will be to choose who to meet.
+			</p>
+		</DetailSection>
+		<div id="add-details">
+			<DetailSection title="Setting payment details" sub section="02" imgPattern="PayggyS">
+				<p slot="description">
+					I can select an amount and token, available from my wallet account. Payggy checks
+					available balances based on the currently selected token.
+				</p>
+			</DetailSection>
+		</div>
+		<div id="add-summary">
+			<DetailSection title="Summary" sub section="03" imgPattern="PayggyS">
+				<p slot="description">
+					The summary view allows me to check the payment details I provided, before adding to the
+					chat.
+				</p>
+			</DetailSection>
+		</div>
+	</section>
+	<section id="in-chat-messages">
+		<DetailSection title="In-chat messages" section="04" imgPattern="PayggyS">
+			<p slot="description">
+				Payggy will post messages to chat when a new payment is sent or when a transaction failed.
+			</p>
+		</DetailSection>
+	</section>
+	<section id="payggy-full-view">
+		<DetailSection title="Payggy full view" section="05" imgPattern="PayggyS">
+			<p slot="description">
+				By tapping on any Payggy instance I can access the Waku Object full view, where more
+				information and actions are available.
+			</p>
+		</DetailSection>
+		<div id="payggy-successful">
+			<DetailSection title="Successful transaction" sub section="06" imgPattern="PayggyS">
+				<p slot="description">
+					By tapping on any Payggy instance I can access the Waku Object full view, where more
+					information and actions are available.
+				</p>
+			</DetailSection>
+		</div>
+		<div id="payggy-failed">
+			<DetailSection title="Failed transaction" sub section="07" imgPattern="PayggyS">
+				<p slot="description">
+					If a transaction fails, Payggy will send a chat message. More details are available by
+					tapping on the instance button in the message or by using the menu in the top-right
+					corner.
+				</p>
+			</DetailSection>
+		</div>
+		<div id="payggy-history">
+			<DetailSection title="Activity history" sub section="08" imgPattern="PayggyS">
+				<p slot="description">
+					By default, only the latest or new (unseen) activity is displayed on top of the full view.
+					All activity related to a Payggy instance can be viewed in the “Activity history” view.
+				</p>
+			</DetailSection>
+		</div>
+	</section>
+	<Container padY={0}>
+		<Divider padTop={48} />
+	</Container>
+</Layout>
+<Footer />

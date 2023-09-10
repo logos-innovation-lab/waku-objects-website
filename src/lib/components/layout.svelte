@@ -4,12 +4,13 @@
 
 	import Button from '$lib/components/button.svelte'
 	import Drawer from '$lib/components/drawer.svelte'
-	import Menu from '$lib/components/icons/menu.svelte'
 
+	import Menu from '$lib/components/icons/menu.svelte'
 	import SidePanelClose from '$lib/components/icons/side-panel-close.svelte'
 
 	let layoutHeight
 
+	export let iconBg: string | undefined = undefined
 	export let open = true
 	export function toggleDrawer() {
 		open = !open
@@ -26,7 +27,7 @@
 			>
 				<Drawer>
 					<div class="page-title">
-						<div class="icon">
+						<div class="icon" style={`background-color: ${iconBg};`}>
 							<slot name="icon" />
 						</div>
 						<slot name="title" />

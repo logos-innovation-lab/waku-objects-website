@@ -4,7 +4,7 @@
 	type $$Props = IconProps
 
 	export let size = 96
-	export let color: string | undefined = undefined
+	export let color: string | undefined = '#0065CC'
 	export let title: string | undefined = undefined
 </script>
 
