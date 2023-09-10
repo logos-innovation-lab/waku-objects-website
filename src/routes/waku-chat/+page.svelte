@@ -1,32 +1,28 @@
 <script lang="ts">
-	// import { Accordion, AccordionItem } from 'svelte-collapsible'
-	// const duration = 0.1 // seconds
-	// const easing = 'linear'
-
 	// Components
 	import Button from '$lib/components/button.svelte'
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
-
-	// Icons
-	// import Menu from '$lib/components/icons/menu.svelte'
-	// import Header from '$lib/components/header.svelte'
-	// import ChatBot from '$lib/components/icons/chat-bot.svelte'
 	import PageHeader from '$lib/components/page-header.svelte'
-	import Launch from '$lib/components/icons/launch.svelte'
-	import LogoGithub from '$lib/components/icons/logo-github.svelte'
-	import Calibrate from '$lib/components/icons/calibrate.svelte'
 	import DetailSection from '$lib/components/detail-section.svelte'
-
-	import { scroll } from '$lib/utils/pageScroll'
 	import Layout from '$lib/components/layout.svelte'
 	import Collapse from '$lib/components/collapse.svelte'
 	import CollapseItem from '$lib/components/collapse-item.svelte'
+
+	// Icons
+	import Launch from '$lib/components/icons/launch.svelte'
+	import LogoGithub from '$lib/components/icons/logo-github.svelte'
+	import Calibrate from '$lib/components/icons/calibrate.svelte'
+	import ChatBot from '$lib/components/icons/chat-bot.svelte'
+
+	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
 <Layout>
-	<svelte:fragment slot="sidebar">
+	<ChatBot slot="icon" />
+	<div slot="title">Waku Chat</div>
+	<svelte:fragment slot="content">
 		<Collapse>
 			<svelte:fragment slot="cl-header">Identity</svelte:fragment>
 			<svelte:fragment slot="cl-body">
@@ -99,7 +95,6 @@
 				>
 					Group settings
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-invite'))
@@ -107,7 +102,6 @@
 				>
 					Invite to group
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-create'))
@@ -127,7 +121,6 @@
 				>
 					Images
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#images-in-chat'))
@@ -135,7 +128,6 @@
 				>
 					Viewing images in-chat
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#images-fullscreen'))
@@ -155,7 +147,6 @@
 				>
 					Waku Objects
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-messages'))
@@ -163,7 +154,6 @@
 				>
 					Waku Objects messages
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-nav'))
@@ -171,7 +161,6 @@
 				>
 					Waku Objects in-chat navigation
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-not'))
@@ -179,7 +168,6 @@
 				>
 					Waku Objects in-chat notifications
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-fullview'))
@@ -199,7 +187,6 @@
 				>
 					Identity & Settings
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-objects'))
@@ -207,7 +194,6 @@
 				>
 					Waku Objects
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-account'))
@@ -215,7 +201,6 @@
 				>
 					Account
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-password'))
@@ -223,7 +208,6 @@
 				>
 					Password & Recovery
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-contacts'))
@@ -231,7 +215,6 @@
 				>
 					Contacts list
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-chat'))
@@ -239,7 +222,6 @@
 				>
 					Chat appearance
 				</CollapseItem>
-				<!-- FIXME -->
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-international'))
@@ -258,7 +240,7 @@
 			Desktop view
 		</CollapseItem>
 	</svelte:fragment>
-	<PageHeader bgColor="#404040">
+	<PageHeader bgColor="#404040" slot="pageheader">
 		<img src="/images/waku_chat_cover.png" alt="Waku Chat banner" slot="image" />
 		<p slot="first">
 			Waku Chat is a simple chat application built on Waku. Waku Objects can be added to Waku Chat.
@@ -507,88 +489,4 @@
 		<Divider padTop={48} />
 	</Container>
 </Layout>
-
-<!-- <Drawer />
-<Container>
-	<Button variant="icon" active>
-		<Menu />
-	</Button>
-</Container> -->
-
-<!-- <Header title="Waku Chat">
-	<svelte:fragment slot="icon">
-		<ChatBot size={24} title="Waku Chat logo" />
-	</svelte:fragment>
-	<svelte:fragment slot="nav">
-		<Dropdown>
-			<Button slot="button" variant="icon">
-				<Menu />
-			</Button>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#identity'))
-				}}
-			>
-				Identity
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#chats-list'))
-				}}
-			>
-				Chats lists
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#invite'))
-				}}
-			>
-				Invite to chat
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#private-chat'))
-				}}
-			>
-				Private chat
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#group-chat'))
-				}}
-			>
-				Group chat
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#images'))
-				}}
-			>
-				Images
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#waku-objects'))
-				}}
-			>
-				Waku Objects
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#settings'))
-				}}
-			>
-				Identity & Settings
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#desktop'))
-				}}
-			>
-				Desktop view
-			</DropdownItem>
-		</Dropdown>
-	</svelte:fragment>
-</Header> -->
-
 <Footer />

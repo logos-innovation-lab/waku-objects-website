@@ -27,6 +27,7 @@
 		padding: var(--spacing-12);
 		border-radius: var(--border-radius);
 		width: 100%;
+		white-space: nowrap;
 		z-index: 10;
 	}
 

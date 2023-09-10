@@ -9,7 +9,7 @@
 	import DropdownItem from '$lib/components/dropdown-item.svelte'
 
 	// Icons
-	import WakuLogo from '$lib/components/icons/waku-logo.svelte'
+	import WakuLogo from '$lib/components/icons/logo-waku.svelte'
 	import Menu from '$lib/components/icons/menu.svelte'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
 	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
@@ -20,10 +20,6 @@
 	import Header from '$lib/components/header.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
-
-	// import { theme } from '$lib/theme'
-
-	// $theme = 'home'
 </script>
 
 <Header title="Waku Play">
@@ -97,13 +93,6 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<!-- <Button
-						variant="strong"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
-						<Launch />
-						Try Payggy
-					</Button> -->
 					<Button on:click={() => (window.location.href = '/payggy')}>
 						<ZoomIn />
 						Learn more
@@ -135,13 +124,6 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<!-- <Button
-						variant="strong"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
-						<Launch />
-						Try Split
-					</Button> -->
 					<Button on:click={() => (window.location.href = '/splitter')}>
 						<ZoomIn />
 						Learn more

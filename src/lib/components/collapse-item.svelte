@@ -9,7 +9,7 @@
 	role="option"
 	tabindex={0}
 	aria-selected={false}
-	class={`${main ? 'main' : ''}`}
+	class:main
 >
 	<slot />
 </li>
@@ -19,8 +19,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		// height: var(--spacing-48);
-		padding: var(--spacing-12);
+
+		padding: calc(var(--spacing-12) + 2px);
 		border-radius: var(--border-radius);
 
 		&:hover {

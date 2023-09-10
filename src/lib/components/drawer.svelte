@@ -1,5 +1,4 @@
 <script lang="ts">
-	// export let open = false
 </script>
 
 <div class="drawer-content">
@@ -11,17 +10,16 @@
 <style lang="scss">
 	.drawer-content {
 		overflow: auto;
-		background-color: var(--color-base);
-		width: 320px;
 		height: 100%;
-		border-right: var(--border);
-		padding-inline: var(--spacing-48);
+		height: 100vh;
 		position: relative;
+		z-index: 100;
+		position: sticky;
+		top: 0;
 	}
 	.inner {
-		position: fixed;
 		top: 0;
 		padding-block: var(--spacing-48);
-		width: calc(320px - calc(var(--spacing-48) * 2));
+		background-color: var(--color-base);
 	}
 </style>

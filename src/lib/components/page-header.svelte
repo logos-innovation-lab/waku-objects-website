@@ -16,7 +16,7 @@
 	</div>
 {/if}
 <div class="page-header">
-	<Container padX={0} padY={0}>
+	<Container padX={24} padY={0}>
 		<div class="content">
 			<slot name="first" />
 			<slot name="second" />
@@ -37,7 +37,6 @@
 	}
 	.img {
 		width: 100%;
-		// aspect-ratio: 4/3;
 		max-height: 374px;
 		overflow: hidden;
 		display: flex;

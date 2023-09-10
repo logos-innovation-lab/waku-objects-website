@@ -39,6 +39,7 @@
 	--font-weight-700: 700;
 
 	--border-radius: var(--spacing-24);
+	--border-radius-subtle: calc(var(--spacing-24) / 2);
 	--border: 1px solid var(--color-low);
 	--blur: 3px;
 

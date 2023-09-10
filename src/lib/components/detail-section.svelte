@@ -16,7 +16,7 @@
 
 <div class={`section-wrapper ${sub ? 'sub' : ''}`}>
 	<div class="section-intro">
-		<Container padX={0} padY={48} gap={12}>
+		<Container padX={24} padY={48} gap={12}>
 			<h3 class={`section-title ${sub ? 'sub' : ''}`}>{title}</h3>
 			<slot name="description" />
 		</Container>
@@ -38,17 +38,6 @@
 						</GalleryImage>
 					{/each}
 				</LightboxGallery>
-
-				<!-- <Lightbox
-			enableFallbackThumbnail={false}
-			bind:programmaticController={lightboxProgrammaticController}
-			description="Payggy Identity Lightbox"
-		>
-			<Button variant="subtle">
-				<ZoomIn />
-				View Details
-			</Button>
-		</Lightbox> -->
 			</div>
 		</div>
 	{/if}
@@ -100,8 +89,4 @@
 	:global(div.svelte-lightbox-footer) {
 		display: none;
 	}
-
-	// :global(button.next-button){
-
-	// }
 </style>
