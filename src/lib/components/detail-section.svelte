@@ -6,6 +6,7 @@
 	export let title: string | undefined = undefined
 	export let sub: boolean | undefined = false
 	export let section: string | undefined
+	export let imgPattern: string | undefined = undefined
 
 	const imgObj = import.meta.glob('/static/images/screens/*.png')
 	const imgArray = Object.values(imgObj)
@@ -26,15 +27,15 @@
 			<div class="imgs">
 				<LightboxGallery title="Payggy Identity">
 					<svelte:fragment slot="thumbnail">
-						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/WakuChat_S${section}`), ) as img, i}
+						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
 							<GalleryThumbnail id={i}>
-								<img src={`/images/screens/WakuChat_S${section}I0${i + 1}.png`} alt="" />
+								<img src={`/images/screens/${imgPattern}${section}I0${i + 1}.png`} alt="" />
 							</GalleryThumbnail>
 						{/each}
 					</svelte:fragment>
-					{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/WakuChat_S${section}`), ) as img, i}
+					{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
 						<GalleryImage id={i}>
-							<img src={`/images/screens/WakuChat_S${section}I0${i + 1}.png`} alt="" />
+							<img src={`/images/screens/${imgPattern}${section}I0${i + 1}.png`} alt="" />
 						</GalleryImage>
 					{/each}
 				</LightboxGallery>

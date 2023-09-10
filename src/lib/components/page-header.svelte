@@ -6,10 +6,10 @@
 	export let bgColor: string | undefined = undefined
 </script>
 
-{#if $$slots.image}
+{#if $$slots.image || bgImage}
 	<div style={`${bgColor ? 'background-color: ' + bgColor + ';' : null}`}>
 		<Container padY={0} padX={0} wide>
-			<div class="img" style={`${bgImage ? 'background-image: url("' + bgImage + '"");' : ''}`}>
+			<div class="img" style={`${bgImage ? 'background-image: url("' + bgImage + '");' : ''}`}>
 				<slot name="image" />
 			</div>
 		</Container>
@@ -37,11 +37,14 @@
 	}
 	.img {
 		width: 100%;
-		max-height: 374px;
+		height: 374px;
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-size: cover;
+		background-position: center center;
+		padding: 0;
 	}
 
 	.content {
