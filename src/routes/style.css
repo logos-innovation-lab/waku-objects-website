@@ -39,6 +39,7 @@
 	--font-weight-700: 700;
 
 	--border-radius: var(--spacing-24);
+	--border-radius-subtle: calc(var(--spacing-24) / 2);
 	--border: 1px solid var(--color-low);
 	--blur: 3px;
 
@@ -47,6 +48,7 @@
 	--content-width: 1044px;
 	--detail-width: 498px;
 	--mobile-width: 414px;
+	--min-width: 320px;
 }
 
 html {
@@ -63,7 +65,7 @@ body {
 	font-weight: var(--font-weight-400);
 	font-size: var(--font-size-normal);
 	color: var(--color-ultraHigh);
-	background-color: var(--color-accent);
+	background-color: var(--color-base);
 }
 
 *,

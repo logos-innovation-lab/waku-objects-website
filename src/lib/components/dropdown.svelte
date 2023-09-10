@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount, createEventDispatcher } from 'svelte'
+	// import { Accordion, AccordionItem } from 'svelte-collapsible'
 	import { browser } from '$app/environment'
 
 	const dispatch = createEventDispatcher()

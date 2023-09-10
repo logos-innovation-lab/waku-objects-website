@@ -9,7 +9,7 @@
 	import DropdownItem from '$lib/components/dropdown-item.svelte'
 
 	// Icons
-	import WakuLogo from '$lib/components/icons/waku-logo.svelte'
+	import WakuLogo from '$lib/components/icons/logo-waku.svelte'
 	import Menu from '$lib/components/icons/menu.svelte'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
 	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
@@ -33,28 +33,28 @@
 			</Button>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#objects'))
+					scroll(document.querySelector('#objects'), true)
 				}}
 			>
 				Waku Objects
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#chat'))
+					scroll(document.querySelector('#chat'), true)
 				}}
 			>
 				Waku Chat
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#guidelines'))
+					scroll(document.querySelector('#guidelines'), true)
 				}}
 			>
 				Design Guidelines
 			</DropdownItem>
 			<DropdownItem
 				onClick={() => {
-					scroll(document.querySelector('#why'))
+					scroll(document.querySelector('#why'), true)
 				}}
 			>
 				Why Waku Play?
@@ -93,13 +93,6 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<!-- <Button
-						variant="strong"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
-						<Launch />
-						Try Payggy
-					</Button> -->
 					<Button on:click={() => (window.location.href = '/payggy')}>
 						<ZoomIn />
 						Learn more
@@ -131,13 +124,6 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<!-- <Button
-						variant="strong"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-					>
-						<Launch />
-						Try Split
-					</Button> -->
 					<Button on:click={() => (window.location.href = '/splitter')}>
 						<ZoomIn />
 						Learn more
@@ -214,6 +200,8 @@
 						Chat.
 					</p>
 					<p>
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<!-- FIXME: ADD CORRECT LINK -->
 						Get started by cloning the repository for <a href="#">Waku Chat</a>, or dive into the
 						documentation and design guidelines. They exist to promote consistency in code and user
 						experience.
