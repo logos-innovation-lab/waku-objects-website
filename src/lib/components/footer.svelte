@@ -5,7 +5,7 @@
 </script>
 
 <footer>
-	<Container padY={48}>
+	<Container padY={48} size="normal">
 		<div class="content">
 			<p>wakuplay.im by Logos Innovation Lab — fall 2023</p>
 			<p>

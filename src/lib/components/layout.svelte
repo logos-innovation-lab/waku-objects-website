@@ -87,7 +87,11 @@
 		margin-bottom: var(--spacing-48);
 
 		.icon {
-			padding: var(--spacing-12);
+			width: var(--spacing-48);
+			aspect-ratio: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			border-radius: var(--border-radius-subtle);
 			border: var(--border);
 			line-height: 0;

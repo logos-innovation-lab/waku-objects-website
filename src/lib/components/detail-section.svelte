@@ -48,10 +48,10 @@
 {/if}
 
 <style lang="scss">
-	.section-intro {
-		max-width: 498px;
-		margin-inline: auto;
-	}
+	// .section-intro {
+	// 	max-width: 498px;
+	// 	margin-inline: auto;
+	// }
 
 	.section-title {
 		font-size: var(--font-size-lg);

@@ -8,7 +8,7 @@
 
 {#if $$slots.image || bgImage}
 	<div style={`${bgColor ? 'background-color: ' + bgColor + ';' : null}`}>
-		<Container padY={0} padX={0} wide>
+		<Container padY={0} padX={0} size="wide">
 			<div class="img" style={`${bgImage ? 'background-image: url("' + bgImage + '");' : ''}`}>
 				<slot name="image" />
 			</div>
@@ -55,6 +55,7 @@
 
 		:global(p:first-child) {
 			font-size: var(--font-size-lg);
+			font-weight: var(--font-weight-700);
 			line-height: 1.333;
 		}
 	}

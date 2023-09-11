@@ -12,7 +12,7 @@
 		justify="space-between"
 		alignItems="center"
 		sticky="top"
-		wide={true}
+		size="wide"
 	>
 		<div class="title">
 			{#if $$slots.icon}

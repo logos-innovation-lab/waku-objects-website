@@ -63,7 +63,7 @@
 	</svelte:fragment>
 </Header>
 <section id="intro">
-	<Container padY={0}>
+	<Container padY={0} size="normal">
 		<h1>
 			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>. Chat
 			members interact with Waku Objects to execute specific transactional cryptographic protocols,
@@ -76,11 +76,11 @@
 		</h2>
 	</Container>
 </section>
-<Container padY={0}>
+<Container padY={0} size="normal">
 	<Divider padTop={48} />
 </Container>
 <section id="objects">
-	<Container padY={48}>
+	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Objects</h3>
 		<div class="grid">
 			<WakuObject name="Payggy" bgColor="#91ff76">
@@ -149,11 +149,11 @@
 		</div>
 	</Container>
 </section>
-<Container padY={0}>
+<Container padY={0} size="normal">
 	<Divider />
 </Container>
 <section id="chat">
-	<Container padY={48}>
+	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Chat</h3>
 		<div class="grid">
 			<div class="img" />
@@ -186,11 +186,11 @@
 		</div>
 	</Container>
 </section>
-<Container padY={0}>
+<Container padY={0} size="normal">
 	<Divider />
 </Container>
 <section id="guidelines">
-	<Container padY={48}>
+	<Container padY={48} size="normal">
 		<h3 class="section-title">Design Guidelines</h3>
 		<div class="grid">
 			<div class="content">
@@ -218,11 +218,11 @@
 		</div>
 	</Container>
 </section>
-<Container padY={0}>
+<Container padY={0} size="normal">
 	<Divider />
 </Container>
 <section id="why">
-	<Container padY={48}>
+	<Container padY={48} size="normal">
 		<h3 class="section-title">Why Waku Play?</h3>
 		<div class="intro">
 			<p>
