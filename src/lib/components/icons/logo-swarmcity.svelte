@@ -13,7 +13,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	width={size}
 	height={size * 0.40868}
-	viewBox={`0 0 ${size} ${size * 0.40868}`}
+	viewBox={`0 0 120 ${120 * 0.40868}`}
 >
 	<title>{title}</title>
 	<g xmlns="http://www.w3.org/2000/svg" fill="none" fill-rule="evenodd">
