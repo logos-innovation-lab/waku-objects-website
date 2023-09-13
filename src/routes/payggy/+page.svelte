@@ -135,7 +135,7 @@
 			</DetailSection>
 		</div>
 		<div id="add-summary">
-			<DetailSection title="Summary" sub section="03" imgPattern="PayggyS">
+			<DetailSection title="Summary" sub last section="03" imgPattern="PayggyS">
 				<p slot="description">
 					The summary view allows me to check the payment details I provided, before adding to the
 					chat.
