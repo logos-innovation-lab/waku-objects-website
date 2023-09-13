@@ -63,7 +63,8 @@
 	.buttons {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: var(--spacing-12);
 	}
