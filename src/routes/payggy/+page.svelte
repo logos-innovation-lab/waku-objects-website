@@ -135,7 +135,7 @@
 			</DetailSection>
 		</div>
 		<div id="add-summary">
-			<DetailSection title="Summary" sub section="03" imgPattern="PayggyS">
+			<DetailSection title="Summary" sub last section="03" imgPattern="PayggyS">
 				<p slot="description">
 					The summary view allows me to check the payment details I provided, before adding to the
 					chat.
@@ -144,7 +144,7 @@
 		</div>
 	</section>
 	<section id="in-chat-messages">
-		<DetailSection title="In-chat messages" section="04" imgPattern="PayggyS">
+		<DetailSection title="In-chat messages" last section="04" imgPattern="PayggyS">
 			<p slot="description">
 				Payggy will post messages to chat when a new payment is sent or when a transaction failed.
 			</p>
@@ -183,8 +183,5 @@
 			</DetailSection>
 		</div>
 	</section>
-	<Container padY={0}>
-		<Divider padTop={48} />
-	</Container>
 </Layout>
 <Footer />
