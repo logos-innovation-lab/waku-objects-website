@@ -1,7 +1,6 @@
 <script lang="ts">
 	// Components
 	import Button from '$lib/components/button.svelte'
-	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
 	import PageHeader from '$lib/components/page-header.svelte'
@@ -14,7 +13,6 @@
 	import Calibrate from '$lib/components/icons/calibrate.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
-	import LogoSafeMeet from '$lib/components/icons/logo-safemeet.svelte'
 	import LogoSplit from '$lib/components/icons/logo-split.svelte'
 </script>
 

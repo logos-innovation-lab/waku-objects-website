@@ -1,8 +1,6 @@
 <script lang="ts">
 	// Components
 	import Button from '$lib/components/button.svelte'
-	import Container from '$lib/components/container.svelte'
-	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
 	import PageHeader from '$lib/components/page-header.svelte'
 	import DetailSection from '$lib/components/detail-section.svelte'
