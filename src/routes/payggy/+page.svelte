@@ -144,7 +144,7 @@
 		</div>
 	</section>
 	<section id="in-chat-messages">
-		<DetailSection title="In-chat messages" section="04" imgPattern="PayggyS">
+		<DetailSection title="In-chat messages" last section="04" imgPattern="PayggyS">
 			<p slot="description">
 				Payggy will post messages to chat when a new payment is sent or when a transaction failed.
 			</p>
@@ -183,8 +183,5 @@
 			</DetailSection>
 		</div>
 	</section>
-	<Container padY={0}>
-		<Divider padTop={48} />
-	</Container>
 </Layout>
 <Footer />

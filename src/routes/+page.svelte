@@ -115,16 +115,16 @@
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Splitter" bgColor="#0065CC">
-				<LogoSplit title="Splitter object logo" slot="image" />
+			<WakuObject name="Split" bgColor="#0065CC">
+				<LogoSplit title="Split object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
-						Share expenses with a group of friends - with Splitter you can add expenses, or settle
-						what you owe at any time.
+						Share expenses with a group of friends - with Split you can add expenses, or settle what
+						you owe at any time.
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => (window.location.href = '/splitter')}>
+					<Button on:click={() => (window.location.href = '/split')}>
 						<ZoomIn />
 						Learn more
 					</Button>

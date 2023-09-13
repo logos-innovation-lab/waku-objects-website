@@ -168,7 +168,7 @@
 			</DetailSection>
 		</div>
 		<div id="add-summary">
-			<DetailSection title="Summary" sub section="04" imgPattern="SafeMeet_S">
+			<DetailSection title="Summary" sub last section="04" imgPattern="SafeMeet_S">
 				<p slot="description">
 					The summary view allows me to check the meeting details I provided, before adding to the
 					chat.
@@ -177,7 +177,7 @@
 		</div>
 	</section>
 	<section id="in-chat-messages">
-		<DetailSection title="In-chat messages" section="05" imgPattern="SafeMeet_S">
+		<DetailSection title="In-chat messages" last section="05" imgPattern="SafeMeet_S">
 			<p slot="description">
 				SafeMeet will post messages to the chat when a new meeting invite is sent, when a meeting
 				invite is accepted or declined and when a previously accepted meeting is cancelled.
@@ -269,8 +269,5 @@
 			</DetailSection>
 		</div>
 	</section>
-	<Container padY={0}>
-		<Divider padTop={48} />
-	</Container>
 </Layout>
 <Footer />

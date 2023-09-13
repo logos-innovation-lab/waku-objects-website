@@ -5,6 +5,7 @@
 
 	export let title: string | undefined = undefined
 	export let sub: boolean | undefined = false
+	export let last: boolean | undefined = false
 	export let section: string | undefined
 	export let imgPattern: string | undefined = undefined
 
@@ -15,7 +16,7 @@
 	})
 </script>
 
-<div class={`section-wrapper ${sub ? 'sub' : ''}`}>
+<div class={`section-wrapper ${sub ? 'sub' : ''} ${last ? 'last' : ''}`}>
 	<div class="section-intro">
 		<Container padX={24} padY={48} gap={12}>
 			<h3 class={`section-title ${sub ? 'sub' : ''}`}>{title}</h3>
@@ -43,16 +44,12 @@
 		</div>
 	{/if}
 </div>
-{#if !sub}
+
+{#if last}
 	<Divider short />
 {/if}
 
 <style lang="scss">
-	// .section-intro {
-	// 	max-width: 498px;
-	// 	margin-inline: auto;
-	// }
-
 	.section-title {
 		font-size: var(--font-size-lg);
 		font-weight: var(--font-weight-700);
@@ -62,7 +59,7 @@
 		font-size: var(--font-size-normal);
 	}
 
-	.section-wrapper:not(.sub) {
+	.section-wrapper.last {
 		padding-bottom: var(--spacing-48);
 	}
 
