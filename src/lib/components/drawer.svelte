@@ -21,5 +21,6 @@
 		top: 0;
 		padding-block: var(--spacing-48);
 		background-color: var(--color-base);
+		padding-inline: var(--spacing-48);
 	}
 </style>
