@@ -24,14 +24,16 @@
 		</Container>
 	</div>
 	{#if section}
-		<div class="imgs-wrap">
-			<div class="imgs">
+		<div class={`imgs-wrap `}>
+			<div class={`imgs `}>
 				<LightboxGallery title="Payggy Identity">
 					<svelte:fragment slot="thumbnail">
 						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
-							<GalleryThumbnail id={i}>
-								<img src={`/images/screens/${imgPattern}${section}I0${i + 1}.png`} alt="" />
-							</GalleryThumbnail>
+							<div>
+								<GalleryThumbnail id={i}>
+									<img src={`/images/screens/${imgPattern}${section}I0${i + 1}.png`} alt="" />
+								</GalleryThumbnail>
+							</div>
 						{/each}
 					</svelte:fragment>
 					{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
@@ -71,17 +73,33 @@
 		align-items: center;
 		gap: var(--spacing-24);
 		justify-content: center;
+		width: 100%;
 	}
 
 	.imgs {
 		display: flex;
+		flex-wrap: nowrap;
+		white-space: nowrap;
 		flex-direction: row;
 		align-items: center;
-		justify-content: center;
 		gap: var(--spacing-24);
+		overflow-x: auto;
+
+		> div {
+			flex-shrink: 0;
+
+			&:first-child {
+				margin-left: auto;
+			}
+
+			&:last-child {
+				margin-right: auto;
+			}
+		}
 
 		:global(img) {
-			max-height: 448px;
+			height: 448px;
+			// width: 207px;
 		}
 	}
 	:global(div.svelte-lightbox-footer) {
