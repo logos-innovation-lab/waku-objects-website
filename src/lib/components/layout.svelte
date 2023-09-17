@@ -68,7 +68,7 @@
 		align-self: flex-start;
 		background-color: var(--color-base);
 		border-right: var(--border);
-		padding-inline: var(--spacing-48);
+		// padding-inline: var(--spacing-48);
 		width: 100%;
 		max-width: 414px;
 		z-index: 100;
