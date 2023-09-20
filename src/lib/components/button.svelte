@@ -96,6 +96,7 @@
 
 		&.overlay {
 			background-color: rgba(var(--color-accent-rgb), 0.5);
+			border-color: rgba(var(--color-accent-rgb), 0.5);
 		}
 	}
 </style>
