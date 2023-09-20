@@ -13,9 +13,20 @@
 
 	import { scroll } from '$lib/utils/pageScroll'
 	import LogoSafeMeet from '$lib/components/icons/logo-safemeet.svelte'
+
+	$: innerWidth = 0
+	$: sidebar_show = innerWidth >= 688 ? true : false
+	console.log(sidebar_show)
+	function toggle() {
+		if (innerWidth < 688) {
+			sidebar_show = !sidebar_show
+		}
+	}
 </script>
 
-<Layout iconBg="#3f3f3f">
+<svelte:window bind:innerWidth />
+
+<Layout iconBg="#3f3f3f" bind:open={sidebar_show}>
 	<LogoSafeMeet size={20} slot="icon" color="#FF6128" title="SafeMeet logo" />
 	<div slot="title">SafeMeet</div>
 	<svelte:fragment slot="content">
@@ -25,6 +36,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-to-chat'))
+						toggle()
 					}}
 				>
 					Adding to Chat
@@ -32,6 +44,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-date'))
+						toggle()
 					}}
 				>
 					Setting date and time
@@ -39,6 +52,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-area'))
+						toggle()
 					}}
 				>
 					Setting meeting area
@@ -46,6 +60,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-summary'))
+						toggle()
 					}}
 				>
 					Summary
@@ -56,6 +71,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#in-chat-messages'))
+				toggle()
 			}}
 		>
 			In-chat messages
@@ -66,6 +82,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-full-view'))
+						toggle()
 					}}
 				>
 					SafeMeet full view
@@ -73,6 +90,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-confirmed'))
+						toggle()
 					}}
 				>
 					Meeting confirmed
@@ -80,6 +98,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-check-time'))
+						toggle()
 					}}
 				>
 					Location check on meeting time
@@ -87,6 +106,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-not-in-area'))
+						toggle()
 					}}
 				>
 					Participant(s) not located within meeting area
@@ -94,6 +114,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-share-location'))
+						toggle()
 					}}
 				>
 					Sharing exact meeting location
@@ -101,6 +122,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-signaling-arrival'))
+						toggle()
 					}}
 				>
 					Signaling arrival (invitee)
@@ -108,6 +130,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-ending'))
+						toggle()
 					}}
 				>
 					Meeting ending
@@ -115,6 +138,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#safemeet-history'))
+						toggle()
 					}}
 				>
 					Activity history

@@ -17,9 +17,18 @@
 	import ChatBot from '$lib/components/icons/chat-bot.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
+
+	$: innerWidth = 0
+	$: sidebar_show = innerWidth >= 688 ? true : false
+	console.log(sidebar_show)
+	function toggle() {
+		sidebar_show = !sidebar_show
+	}
 </script>
 
-<Layout>
+<svelte:window bind:innerWidth />
+
+<Layout bind:open={sidebar_show}>
 	<ChatBot slot="icon" />
 	<div slot="title">Waku Chat</div>
 	<svelte:fragment slot="content">
@@ -29,6 +38,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#identity'))
+						toggle()
 					}}
 				>
 					Identity
@@ -36,6 +46,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#identity-new'))
+						toggle()
 					}}
 				>
 					Create a new identity
@@ -47,6 +58,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#chats-list'))
+				toggle()
 			}}
 		>
 			Chats list
@@ -57,6 +69,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#invite'))
+						toggle()
 					}}
 				>
 					Invite to chat
@@ -64,6 +77,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#invite-link'))
+						toggle()
 					}}
 				>
 					Invite link landing
@@ -74,6 +88,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#private-chat'))
+				toggle()
 			}}
 		>
 			Private chat
@@ -84,6 +99,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-chat'))
+						toggle()
 					}}
 				>
 					Group chat
@@ -91,6 +107,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-settings'))
+						toggle()
 					}}
 				>
 					Group settings
@@ -98,6 +115,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-invite'))
+						toggle()
 					}}
 				>
 					Invite to group
@@ -105,6 +123,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#group-create'))
+						toggle()
 					}}
 				>
 					Create group
@@ -117,6 +136,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#images'))
+						toggle()
 					}}
 				>
 					Images
@@ -124,6 +144,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#images-in-chat'))
+						toggle()
 					}}
 				>
 					Viewing images in-chat
@@ -131,6 +152,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#images-fullscreen'))
+						toggle()
 					}}
 				>
 					Viewing images fullscreen
@@ -143,6 +165,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects'))
+						toggle()
 					}}
 				>
 					Waku Objects
@@ -150,6 +173,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-messages'))
+						toggle()
 					}}
 				>
 					Waku Objects messages
@@ -157,6 +181,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-nav'))
+						toggle()
 					}}
 				>
 					Waku Objects in-chat navigation
@@ -164,6 +189,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-not'))
+						toggle()
 					}}
 				>
 					Waku Objects in-chat notifications
@@ -171,6 +197,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#objects-fullview'))
+						toggle()
 					}}
 				>
 					Waku Objects full view
@@ -183,6 +210,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings'))
+						toggle()
 					}}
 				>
 					Identity & Settings
@@ -190,6 +218,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-objects'))
+						toggle()
 					}}
 				>
 					Waku Objects
@@ -197,6 +226,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-account'))
+						toggle()
 					}}
 				>
 					Account
@@ -204,6 +234,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-password'))
+						toggle()
 					}}
 				>
 					Password & Recovery
@@ -211,6 +242,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-contacts'))
+						toggle()
 					}}
 				>
 					Contacts list
@@ -218,6 +250,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-chat'))
+						toggle()
 					}}
 				>
 					Chat appearance
@@ -225,6 +258,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#settings-international'))
+						toggle()
 					}}
 				>
 					International
@@ -235,6 +269,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#desktop'))
+				toggle()
 			}}
 		>
 			Desktop view

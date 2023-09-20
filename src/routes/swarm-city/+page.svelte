@@ -13,9 +13,20 @@
 
 	import { scroll } from '$lib/utils/pageScroll'
 	import LogoSwarmcity from '$lib/components/icons/logo-swarmcity.svelte'
+
+	$: innerWidth = 0
+	$: sidebar_show = innerWidth >= 688 ? true : false
+	console.log(sidebar_show)
+	function toggle() {
+		if (innerWidth < 688) {
+			sidebar_show = !sidebar_show
+		}
+	}
 </script>
 
-<Layout iconBg="#FEEA16">
+<svelte:window bind:innerWidth />
+
+<Layout iconBg="#FEEA16" bind:open={sidebar_show}>
 	<LogoSwarmcity size={26} color="#3F3F3F" slot="icon" title="Swarm City logo" />
 	<div slot="title">Swarm City</div>
 	<svelte:fragment slot="content">
@@ -25,6 +36,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-to-chat'))
+						toggle()
 					}}
 				>
 					Adding to Chat
@@ -32,6 +44,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-select-marketplace'))
+						toggle()
 					}}
 				>
 					Selecting a marketplace
@@ -39,6 +52,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-describe'))
+						toggle()
 					}}
 				>
 					Describing the request
@@ -46,6 +60,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-set-price'))
+						toggle()
 					}}
 				>
 					Setting the price and provider guarantee
@@ -53,6 +68,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-summary'))
+						toggle()
 					}}
 				>
 					Summary and confirmation with payment
@@ -63,6 +79,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#in-chat-messages'))
+				toggle()
 			}}
 		>
 			In-chat messages
@@ -73,6 +90,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-full-view'))
+						toggle()
 					}}
 				>
 					Swarm City full view
@@ -80,6 +98,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-sending-application'))
+						toggle()
 					}}
 				>
 					Sending application
@@ -87,6 +106,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-receiving-applications'))
+						toggle()
 					}}
 				>
 					Receiving applications
@@ -94,6 +114,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-applications-list'))
+						toggle()
 					}}
 				>
 					Applications list
@@ -101,6 +122,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-application-page-seeker'))
+						toggle()
 					}}
 				>
 					Application page (seeker view)
@@ -108,6 +130,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-application-page-provider'))
+						toggle()
 					}}
 				>
 					Application page (provider view)
@@ -115,6 +138,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-application-page-public'))
+						toggle()
 					}}
 				>
 					Application page (public view)
@@ -122,6 +146,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-application-confirming'))
+						toggle()
 					}}
 				>
 					Confirming application
@@ -129,6 +154,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-in-deal'))
+						toggle()
 					}}
 				>
 					In a deal
@@ -136,6 +162,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-history'))
+						toggle()
 					}}
 				>
 					Activity history
@@ -143,6 +170,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#swarmcity-paying-out'))
+						toggle()
 					}}
 				>
 					Paying out
@@ -153,6 +181,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#chat'))
+				toggle()
 			}}
 		>
 			Swarm City chat

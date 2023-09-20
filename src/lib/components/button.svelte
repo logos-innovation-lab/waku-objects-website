@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let variant: '' | 'icon' | 'strong' | 'subtle' = ''
+	export let variant: '' | 'icon' | 'strong' | 'subtle' | 'overlay' = ''
 	export let disabled: boolean | undefined = undefined
 	export let grow = false
 	export let active = false
@@ -92,6 +92,10 @@
 
 		&.subtle {
 			background-color: var(--color-ultraLow);
+		}
+
+		&.overlay {
+			background-color: rgba(var(--color-accent-rgb), 0.5);
 		}
 	}
 </style>

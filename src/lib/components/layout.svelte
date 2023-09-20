@@ -7,21 +7,27 @@
 
 	import Menu from '$lib/components/icons/menu.svelte'
 	import SidePanelClose from '$lib/components/icons/side-panel-close.svelte'
+	import Close from './icons/close.svelte'
 
 	let layoutHeight
 
 	export let iconBg: string | undefined = undefined
-	export let open = true
+	export let open = false
 	export function toggleDrawer() {
 		open = !open
 	}
+
+	$: innerWidth = 0
+	$: show_close = innerWidth >= 688 ? false : true
 </script>
 
-<div class="layout" bind:clientHeight={layoutHeight}>
+<svelte:window bind:innerWidth />
+
+<div class="layout" bind:clientHeight={layoutHeight} class:open>
 	{#if open}
-		<nav class="drawer" class:open transition:slide={{ axis: 'x' }}>
+		<nav class="drawer" transition:slide={{ axis: 'x' }}>
 			<div
-				style={`height: ${layoutHeight}px;`}
+				style={`height: ${layoutHeight}px; `}
 				in:fade={{ duration: 400, easing: cubicIn }}
 				out:fade={{ duration: 100, easing: cubicOut }}
 			>
@@ -31,11 +37,20 @@
 							<slot name="icon" />
 						</div>
 						<slot name="title" />
+						{#if show_close}
+							<div class="close">
+								<Button variant="icon" on:click={toggleDrawer}>
+									<Close />
+								</Button>
+							</div>
+						{/if}
 					</div>
 					<slot name="content" />
-					<Button variant="icon" on:click={toggleDrawer}>
-						<SidePanelClose />
-					</Button>
+					{#if !show_close}
+						<Button variant="icon" on:click={toggleDrawer}>
+							<SidePanelClose />
+						</Button>
+					{/if}
 				</Drawer>
 			</div>
 		</nav>
@@ -44,8 +59,8 @@
 		<slot name="pageheader" />
 		{#if !open}
 			<div class="btn-menu" transition:fade>
-				<Button variant="icon" active on:click={toggleDrawer}>
-					<Menu />
+				<Button variant="overlay" active on:click={toggleDrawer}>
+					<Menu color="--color-base" />
 				</Button>
 			</div>
 		{/if}
@@ -70,13 +85,14 @@
 		background-color: var(--color-base);
 		border-right: var(--border);
 		width: 100%;
-		max-width: 414px;
 		z-index: 100;
 		height: 100%;
 		align-self: flex-start;
 
-		@media (min-width: 800px) {
-			position: unset;
+		@media (min-width: 687px) {
+			position: static;
+			width: 367px;
+			flex-shrink: 0;
 		}
 	}
 
@@ -99,6 +115,10 @@
 			border-radius: var(--border-radius-subtle);
 			border: var(--border);
 			line-height: 0;
+		}
+		.close {
+			margin-left: auto;
+			margin-right: 0;
 		}
 	}
 

@@ -9,7 +9,7 @@
 
 <style lang="scss">
 	.drawer-content {
-		overflow: auto;
+		overflow-y: auto;
 		height: 100%;
 		height: 100vh;
 		position: relative;
