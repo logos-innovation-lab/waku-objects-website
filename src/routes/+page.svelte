@@ -93,7 +93,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => (window.location.href = '/payggy')}>
+					<Button on:click={() => window.open('/payggy')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -109,7 +109,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => (window.location.href = '/safemeet')}>
+					<Button on:click={() => window.open('/safemeet')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -124,7 +124,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => (window.location.href = '/split')}>
+					<Button on:click={() => window.open('/split')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -140,7 +140,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => (window.location.href = '/swarm-city')}>
+					<Button on:click={() => window.open('/swarm-city')}>
 						<ZoomIn />
 						Learn more
 					</Button>
@@ -176,7 +176,7 @@
 							<Launch />
 							Try Waku Chat
 						</Button>
-						<Button on:click={() => (window.location.href = '/waku-chat')}>
+						<Button on:click={() => window.open('/waku-chat')}>
 							<ZoomIn />
 							Learn more
 						</Button>
@@ -207,7 +207,7 @@
 						experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button variant="strong" on:click={() => (window.location.href = '/learn')}>
+						<Button variant="strong" on:click={() => window.open('/learn')}>
 							<Launch />
 							Learn how to build
 						</Button>
