@@ -15,9 +15,20 @@
 
 	import { scroll } from '$lib/utils/pageScroll'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
+
+	$: innerWidth = 0
+	$: sidebar_show = innerWidth >= 688 ? true : false
+	console.log(sidebar_show)
+	function toggle() {
+		if (innerWidth < 688) {
+			sidebar_show = !sidebar_show
+		}
+	}
 </script>
 
-<Layout iconBg="#91FF76">
+<svelte:window bind:innerWidth />
+
+<Layout iconBg="#91FF76" bind:open={sidebar_show}>
 	<LogoPayggy size={20} slot="icon" title="Payggy logo" />
 	<div slot="title">Payggy</div>
 	<svelte:fragment slot="content">
@@ -27,6 +38,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-to-chat'))
+						toggle()
 					}}
 				>
 					Adding to Chat
@@ -34,6 +46,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-details'))
+						toggle()
 					}}
 				>
 					Setting payment details
@@ -41,6 +54,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-summary'))
+						toggle()
 					}}
 				>
 					Summary
@@ -51,6 +65,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#in-chat-messages'))
+				toggle()
 			}}
 		>
 			In-chat messages
@@ -61,6 +76,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#payggy-full-view'))
+						toggle()
 					}}
 				>
 					Payggy full view
@@ -68,6 +84,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#payggy-successful'))
+						toggle()
 					}}
 				>
 					Successful transaction
@@ -75,6 +92,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#payggy-failed'))
+						toggle()
 					}}
 				>
 					Failed transaction
@@ -82,6 +100,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#payggy-history'))
+						toggle()
 					}}
 				>
 					Activity history

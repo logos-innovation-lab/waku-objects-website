@@ -14,9 +14,20 @@
 
 	import { scroll } from '$lib/utils/pageScroll'
 	import LogoSplit from '$lib/components/icons/logo-split.svelte'
+
+	$: innerWidth = 0
+	$: sidebar_show = innerWidth >= 688 ? true : false
+	console.log(sidebar_show)
+	function toggle() {
+		if (innerWidth < 688) {
+			sidebar_show = !sidebar_show
+		}
+	}
 </script>
 
-<Layout iconBg="#0065CC">
+<svelte:window bind:innerWidth />
+
+<Layout iconBg="#0065CC" bind:open={sidebar_show}>
 	<LogoSplit size={20} slot="icon" title="Split logo" />
 	<div slot="title">SafeMeet</div>
 	<svelte:fragment slot="content">
@@ -26,6 +37,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-to-chat'))
+						toggle()
 					}}
 				>
 					Adding to Chat
@@ -33,6 +45,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-paid-amount'))
+						toggle()
 					}}
 				>
 					Adding paid amount
@@ -40,6 +53,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-details'))
+						toggle()
 					}}
 				>
 					Adding expense details
@@ -47,6 +61,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#add-summary'))
+						toggle()
 					}}
 				>
 					Summary
@@ -59,6 +74,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#in-chat-messages'))
+						toggle()
 					}}
 				>
 					In-chat messages
@@ -66,6 +82,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#in-chat-expense-page'))
+						toggle()
 					}}
 				>
 					Expense page (standalone)
@@ -78,6 +95,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#split-full-view'))
+						toggle()
 					}}
 				>
 					Split full view
@@ -85,6 +103,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#split-summary'))
+						toggle()
 					}}
 				>
 					Payments summary
@@ -92,6 +111,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#split-all-expenses'))
+						toggle()
 					}}
 				>
 					All expenses
@@ -99,6 +119,7 @@
 				<CollapseItem
 					onClick={() => {
 						scroll(document.querySelector('#split-history'))
+						toggle()
 					}}
 				>
 					Activity history
@@ -109,6 +130,7 @@
 			main
 			onClick={() => {
 				scroll(document.querySelector('#settling-up'))
+				toggle()
 			}}
 		>
 			Settling up

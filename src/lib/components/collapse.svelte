@@ -1,15 +1,33 @@
 <script lang="ts">
 	import { CollapsibleCard } from 'svelte-collapsible'
 	import Add from '$lib/components/icons/add.svelte'
+	import Subtract from './icons/subtract.svelte'
 
 	const duration = 0.1 // seconds
 	const easing = 'linear'
+
+	$: isOpen = false
+	function switchIcon() {
+		isOpen = !isOpen
+	}
 </script>
 
 <CollapsibleCard {duration} {easing} open={false}>
-	<div class="cl-header" slot="header">
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<div
+		class="cl-header"
+		slot="header"
+		on:click={() => {
+			switchIcon()
+		}}
+	>
 		<slot name="cl-header" />
-		<Add />
+		{#if isOpen}
+			<Subtract />
+		{:else}
+			<Add />
+		{/if}
 	</div>
 	<ul class="cl-body" slot="body">
 		<slot name="cl-body" />
@@ -29,6 +47,7 @@
 		width: 100%;
 		white-space: nowrap;
 		z-index: 10;
+		color: var(--color-accent);
 	}
 
 	.cl-body {
