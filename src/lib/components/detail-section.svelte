@@ -2,12 +2,16 @@
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import { Lightbox, LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox'
+	import Button from './button.svelte'
+	import ZoomIn from './icons/zoom-in.svelte'
 
 	export let title: string | undefined = undefined
 	export let sub: boolean | undefined = false
 	export let last: boolean | undefined = false
 	export let section: string | undefined
 	export let imgPattern: string | undefined = undefined
+
+	let galleryController: any
 
 	const imgObj = import.meta.glob('/static/images/screens/*.png')
 	const imgArray = Object.values(imgObj)
@@ -26,7 +30,7 @@
 	{#if section}
 		<div class={`imgs-wrap `}>
 			<div class={`imgs `}>
-				<LightboxGallery title="Payggy Identity">
+				<LightboxGallery title="Payggy Identity" bind:programmaticController={galleryController}>
 					<svelte:fragment slot="thumbnail">
 						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
 							<div>
@@ -43,6 +47,10 @@
 					{/each}
 				</LightboxGallery>
 			</div>
+			<Button variant="subtle" on:click={() => galleryController.openImage(0)}>
+				<ZoomIn />
+				View details
+			</Button>
 		</div>
 	{/if}
 </div>
@@ -99,7 +107,6 @@
 
 		:global(img) {
 			height: 448px;
-			// width: 207px;
 		}
 	}
 	:global(div.svelte-lightbox-footer) {
