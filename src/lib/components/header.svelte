@@ -6,7 +6,7 @@
 
 <header>
 	<Container
-		padX={0}
+		padX={12}
 		padY={48}
 		direction="row"
 		justify="space-between"
