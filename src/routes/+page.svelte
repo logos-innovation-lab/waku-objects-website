@@ -22,51 +22,18 @@
 	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
-<Header
-	title="Waku Play"
-	onClick={() => {
-		scroll(document.querySelector('#intro'), true)
-	}}
->
-	<svelte:fragment slot="icon">
-		<WakuLogo size={48} title="Waku brand logo" />
-	</svelte:fragment>
-	<svelte:fragment slot="nav">
-		<Dropdown>
-			<Button slot="button" variant="icon">
-				<Menu />
-			</Button>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#objects'), true)
-				}}
-			>
-				Waku Objects
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#chat'), true)
-				}}
-			>
-				Waku Chat
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#guidelines'), true)
-				}}
-			>
-				Design Guidelines
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#why'), true)
-				}}
-			>
-				Why Waku Play?
-			</DropdownItem>
-		</Dropdown>
-	</svelte:fragment>
-</Header>
+<Container padY={0} padX={0} size="normal">
+	<Header
+		title="Waku Play"
+		onClick={() => {
+			scroll(document.querySelector('#intro'), true)
+		}}
+	>
+		<svelte:fragment slot="icon">
+			<WakuLogo size={48} title="Waku brand logo" />
+		</svelte:fragment>
+	</Header>
+</Container>
 <section id="intro">
 	<Container padY={0} size="normal">
 		<h1>
