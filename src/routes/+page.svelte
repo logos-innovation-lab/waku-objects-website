@@ -4,13 +4,10 @@
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
-	import Dropdown from '$lib/components/dropdown.svelte'
 	import WakuObject from '$lib/components/waku-object.svelte'
-	import DropdownItem from '$lib/components/dropdown-item.svelte'
 
 	// Icons
 	import WakuLogo from '$lib/components/icons/logo-waku.svelte'
-	import Menu from '$lib/components/icons/menu.svelte'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
 	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
 	import LogoSplit from '$lib/components/icons/logo-split.svelte'
@@ -30,41 +27,6 @@
 >
 	<svelte:fragment slot="icon">
 		<WakuLogo size={48} title="Waku brand logo" />
-	</svelte:fragment>
-	<svelte:fragment slot="nav">
-		<Dropdown>
-			<Button slot="button" variant="icon">
-				<Menu />
-			</Button>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#objects'), true)
-				}}
-			>
-				Waku Objects
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#chat'), true)
-				}}
-			>
-				Waku Chat
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#guidelines'), true)
-				}}
-			>
-				Design Guidelines
-			</DropdownItem>
-			<DropdownItem
-				onClick={() => {
-					scroll(document.querySelector('#why'), true)
-				}}
-			>
-				Why Waku Play?
-			</DropdownItem>
-		</Dropdown>
 	</svelte:fragment>
 </Header>
 <section id="intro">

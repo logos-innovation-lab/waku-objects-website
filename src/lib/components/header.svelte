@@ -6,13 +6,13 @@
 
 <header>
 	<Container
-		padX={12}
+		padX={0}
 		padY={48}
 		direction="row"
 		justify="space-between"
 		alignItems="center"
 		sticky="top"
-		size="wide"
+		size="normal"
 	>
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<div
