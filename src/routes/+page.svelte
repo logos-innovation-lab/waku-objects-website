@@ -22,7 +22,12 @@
 	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
-<Header title="Waku Play">
+<Header
+	title="Waku Play"
+	onClick={() => {
+		scroll(document.querySelector('#intro'), true)
+	}}
+>
 	<svelte:fragment slot="icon">
 		<WakuLogo size={48} title="Waku brand logo" />
 	</svelte:fragment>
