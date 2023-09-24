@@ -50,7 +50,7 @@
 	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Objects</h3>
 		<div class="grid">
-			<WakuObject name="Payggy" bgColor="#91ff76">
+			<WakuObject name="Payggy" bgColor="#91ff76" onClick={() => window.open('/payggy')}>
 				<LogoPayggy title="Payggy object logo" slot="image" color="#0065CC" />
 
 				<svelte:fragment slot="description">
@@ -66,7 +66,11 @@
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="SafeMeet" bgColor="var(--color-ultraHigh)">
+			<WakuObject
+				name="SafeMeet"
+				bgColor="var(--color-ultraHigh)"
+				onClick={() => window.open('/safemeet')}
+			>
 				<LogoSafemeet title="SafeMeet object logo" slot="image" color="#FF6128" />
 				<svelte:fragment slot="description">
 					<p>
@@ -82,7 +86,7 @@
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Split" bgColor="#0065CC">
+			<WakuObject name="Split" bgColor="#0065CC" onClick={() => window.open('/split')}>
 				<LogoSplit title="Split object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
@@ -97,7 +101,7 @@
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Swarm City" bgColor="#FEEA16">
+			<WakuObject name="Swarm City" bgColor="#FEEA16" onClick={() => window.open('/swarm-city')}>
 				<LogoSwarmcity title="Swarm City object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
@@ -123,7 +127,10 @@
 	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Chat</h3>
 		<div class="grid">
-			<div class="img" />
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="javascript:void(0)" on:click={() => window.open('/waku-chat')} style="border: none;">
+				<div class="img" />
+			</a>
 			<div class="content">
 				<Container padX={0} padY={0} gap={12}>
 					<p>
@@ -181,7 +188,10 @@
 					</Container>
 				</Container>
 			</div>
-			<div class="img" />
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="javascript:void(0)" on:click={() => window.open('/learn')} style="border: none;">
+				<div class="img" />
+			</a>
 		</div>
 	</Container>
 </section>

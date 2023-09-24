@@ -6,18 +6,23 @@
 	export let status: string | undefined = undefined
 	export let bgColor: string | undefined = undefined
 	export let bgImage: string | undefined = undefined
+	export let onClick: () => unknown
 </script>
 
 <Container gap={24} padX={0} padY={0}>
 	{#if $$slots.image}
-		<div
+		<!-- svelte-ignore a11y-invalid-attribute -->
+		<a
+			href="javascript:void(0)"
+			on:click={() => onClick()}
+			on:keydown={() => onClick()}
 			class="img"
 			style={`${bgColor ? 'background-color: ' + bgColor + ';' : ''} ${
 				bgImage ? 'background-image: url("' + bgImage + '"");' : ''
 			}`}
 		>
 			<slot name="image" />
-		</div>
+		</a>
 	{/if}
 	<h3>
 		{name}
@@ -43,6 +48,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border: none;
 	}
 
 	.buttons {
