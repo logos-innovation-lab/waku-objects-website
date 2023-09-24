@@ -7,7 +7,10 @@
 <footer>
 	<Container padY={48} size="normal">
 		<div class="content">
-			<p>wakuplay.im by Logos Innovation Lab — fall 2023</p>
+			<p>
+				<a href="https://www.wakuplay.im/" target="_blank">wakuplay.im</a> by Logos Innovation Lab —
+				fall 2023
+			</p>
 			<p>
 				Logos Innovation Lab prototypes open source technology that promotes peaceful coordination
 				using the <u>Logos</u> stack, so humans can voluntarily find each other, communicate, and transact
@@ -49,6 +52,7 @@
 
 		a {
 			color: var(--color-ultraLow);
+			border-bottom: var(--border);
 		}
 	}
 </style>
