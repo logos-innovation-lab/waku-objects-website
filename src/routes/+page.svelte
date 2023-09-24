@@ -4,13 +4,10 @@
 	import Container from '$lib/components/container.svelte'
 	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
-	import Dropdown from '$lib/components/dropdown.svelte'
 	import WakuObject from '$lib/components/waku-object.svelte'
-	import DropdownItem from '$lib/components/dropdown-item.svelte'
 
 	// Icons
 	import WakuLogo from '$lib/components/icons/logo-waku.svelte'
-	import Menu from '$lib/components/icons/menu.svelte'
 	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
 	import LogoSafemeet from '$lib/components/icons/logo-safemeet.svelte'
 	import LogoSplit from '$lib/components/icons/logo-split.svelte'
@@ -22,18 +19,16 @@
 	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
-<Container padY={0} padX={0} size="normal">
-	<Header
-		title="Waku Play"
-		onClick={() => {
-			scroll(document.querySelector('#intro'), true)
-		}}
-	>
-		<svelte:fragment slot="icon">
-			<WakuLogo size={48} title="Waku brand logo" />
-		</svelte:fragment>
-	</Header>
-</Container>
+<Header
+	title="Waku Play"
+	onClick={() => {
+		scroll(document.querySelector('#intro'), true)
+	}}
+>
+	<svelte:fragment slot="icon">
+		<WakuLogo size={48} title="Waku brand logo" />
+	</svelte:fragment>
+</Header>
 <section id="intro">
 	<Container padY={0} size="normal">
 		<h1>
