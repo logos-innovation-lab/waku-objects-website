@@ -188,7 +188,10 @@
 					</Container>
 				</Container>
 			</div>
-			<div class="img" />
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="javascript:void(0)" on:click={() => window.open('/learn')} style="border: none;">
+				<div class="img" />
+			</a>
 		</div>
 	</Container>
 </section>
