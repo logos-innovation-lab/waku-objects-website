@@ -30,7 +30,15 @@
 	{#if section}
 		<div class={`imgs-wrap `}>
 			<div class={`imgs `}>
-				<LightboxGallery title="Payggy Identity" bind:programmaticController={galleryController}>
+				<LightboxGallery
+					title="Payggy Identity"
+					bind:programmaticController={galleryController}
+					arrowsConfig={{
+						color: 'white',
+						character: 'loop',
+						enableKeyboardControl: true,
+					}}
+				>
 					<svelte:fragment slot="thumbnail">
 						{#each imgs.filter( (img) => img.startsWith(`/static/images/screens/${imgPattern}${section}`), ) as img, i}
 							<div>
@@ -111,5 +119,37 @@
 	}
 	:global(div.svelte-lightbox-footer) {
 		display: none;
+	}
+	:global(div.svelte-lightbox-body),
+	:global(div.svelte-lightbox-main) {
+		position: static !important;
+	}
+
+	:global(div.svelte-lightbox-body button svg) {
+		height: 60px;
+	}
+
+	:global(div.svelte-lightbox-body button svg path) {
+		stroke-linecap: square !important;
+		stroke-linejoin: initial !important;
+		stroke-width: 1px !important;
+		margin: 0px !important;
+	}
+
+	:global(div.svelte-lightbox-header button) {
+		position: absolute !important;
+		z-index: 100;
+		top: var(--spacing-12);
+		right: var(--spacing-24);
+		font-size: 36px;
+		font-weight: 300;
+	}
+
+	:global(div.svelte-lightbox-body .next-button) {
+		right: var(--spacing-12);
+	}
+
+	:global(div.svelte-lightbox-body .previous-button) {
+		left: var(--spacing-12);
 	}
 </style>
