@@ -21,7 +21,11 @@
 				<div class="logo">
 					<Button
 						variant="icon"
-						on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+						on:click={() =>
+							window.open(
+								'https://github.com/logos-innovation-lab/waku-objects-playground',
+								'_blank',
+							)}
 					>
 						<LogoGithub size={24} color="var(--color-ultraLow)" />
 					</Button>
