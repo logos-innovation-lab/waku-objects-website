@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/components/container.svelte'
-
+	export let onClick: () => unknown
 	export let title: string | undefined = undefined
 </script>
 
@@ -14,7 +14,14 @@
 		sticky="top"
 		size="wide"
 	>
-		<div class="title">
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+		<div
+			class="title"
+			on:click={() => onClick()}
+			on:keydown={() => onClick()}
+			role="navigation"
+			aria-label="Main"
+		>
 			{#if $$slots.icon}
 				<slot name="icon" />
 			{/if}
@@ -48,5 +55,6 @@
 		gap: var(--spacing-12);
 		font-size: var(--font-size-lg);
 		font-weight: var(--font-weight-700);
+		cursor: pointer;
 	}
 </style>
