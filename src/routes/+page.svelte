@@ -13,7 +13,7 @@
 	import LogoSplit from '$lib/components/icons/logo-split.svelte'
 	import LogoSwarmcity from '$lib/components/icons/logo-swarmcity.svelte'
 	import Launch from '$lib/components/icons/launch.svelte'
-	import ZoomIn from '$lib/components/icons/zoom-in.svelte'
+	import Info from '$lib/components/icons/information.svelte'
 	import Header from '$lib/components/header.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
@@ -61,7 +61,7 @@
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
 					<Button on:click={() => window.open('/payggy')}>
-						<ZoomIn />
+						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
@@ -77,7 +77,7 @@
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
 					<Button on:click={() => window.open('/safemeet')}>
-						<ZoomIn />
+						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
@@ -92,7 +92,7 @@
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
 					<Button on:click={() => window.open('/split')}>
-						<ZoomIn />
+						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
@@ -108,7 +108,7 @@
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
 					<Button on:click={() => window.open('/swarm-city')}>
-						<ZoomIn />
+						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
@@ -144,7 +144,7 @@
 							Try Waku Chat
 						</Button>
 						<Button on:click={() => window.open('/waku-chat')}>
-							<ZoomIn />
+							<Info />
 							Learn more
 						</Button>
 					</Container>
