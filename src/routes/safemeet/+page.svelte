@@ -167,7 +167,7 @@
 	<section id="add-to-chat">
 		<DetailSection title="Adding to Chat" section="01" imgPattern="SafeMeet_S">
 			<p slot="description">
-				A new SafeMeet instance can be added to any chat by using the “+” button, close the message
+				A new SafeMeet instance can be added to any chat by using the “+” button, next to the message
 				input. In a private chat, the meeting will be organised with the other chat member. If
 				SafeMeet is added to a group chat, the next step will be to choose who to meet.
 			</p>
@@ -229,7 +229,7 @@
 				imgPattern="SafeMeet_S"
 			>
 				<p slot="description">
-					On meeting time, SafeMeet checks both participants' location. If both of them are within
+					On meeting time, SafeMeet checks both participants location. If both of them are within
 					the agreed meeting area, the inviter is asked to look for a safe place to meet. The
 					invitee is informed that the exact meeting location will be shared soon.
 				</p>

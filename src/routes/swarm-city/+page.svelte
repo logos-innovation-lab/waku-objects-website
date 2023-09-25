@@ -216,7 +216,7 @@
 		<div id="add-select-marketplace">
 			<DetailSection title="Selecting a marketplace" sub section="02" imgPattern="SwarmCity_S">
 				<p slot="description">
-					The first thing I have to do is select a Swarm City marketplace where my request will
+					The first thing I have to do is select a Swarm City marketplace where my request will be
 					added.
 				</p>
 			</DetailSection>
@@ -240,7 +240,7 @@
 				<p slot="description">
 					Here, I indicate how much I will pay for my request to be done. I also specify how much
 					guarantee I would like to ask from providers. The provider guarantee is the amount that a
-					provider will have to pay in an escrow contract, in order to confirm his application
+					provider will have to pay in an escrow contract, in order to confirm his application.
 				</p>
 			</DetailSection>
 		</div>
@@ -287,7 +287,7 @@
 				<p slot="description">
 					Applications to a request will generate a notification on the Swarm City icon in the
 					top-right corner. They will not generate in-chat messages, in order to reduce the noise
-					for the group. New activity always appear at the top of the Swarm City full view.
+					for the group. New activity always appears at the top of the Swarm City full view.
 				</p>
 			</DetailSection>
 		</div>
@@ -358,8 +358,8 @@
 		<div id="swarmcity-history">
 			<DetailSection title="Activity history" sub section="16" imgPattern="SwarmCity_S">
 				<p slot="description">
-					Once the confirmation payment has been done by the provider, both parties are in a deal.
-					The provider can start working on the task and the seeker will pay him out upon delivery.
+					By default, only the latest or new (unseen) activity is displayed on top of the full view.
+					All activity related to a SafeMeet instance can be viewed in the “Activity history” view.
 				</p>
 			</DetailSection>
 		</div>
