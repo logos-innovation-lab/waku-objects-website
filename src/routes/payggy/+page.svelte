@@ -177,8 +177,9 @@
 		<div id="payggy-successful">
 			<DetailSection title="Successful transaction" sub section="06" imgPattern="PayggyS">
 				<p slot="description">
-					By tapping on any Payggy instance I can access the Waku Object full view, where more
-					information and actions are available.
+					After the payment is added to the chat, if the transaction is successful the status of the
+					Payggy instance will be updated in the chat message and a notification will be displayed
+					on the Payggy icon in the top-right corner, informing me that more details are available.
 				</p>
 			</DetailSection>
 		</div>
