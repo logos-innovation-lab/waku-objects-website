@@ -476,7 +476,7 @@
 			<DetailSection title="Waku Objects" sub section="20" imgPattern="WakuChat_S">
 				<p slot="description">
 					Under “Identity & Settings > Waku Objects” I can find a list of all Waku Objects and find
-					all the instances (including the non- active ones) for each Waku Object.
+					all the instances (including the non-active ones) for each Waku Object.
 				</p>
 			</DetailSection>
 		</div>
@@ -492,7 +492,7 @@
 			<DetailSection title="Password & Recovery" sub section="22" imgPattern="WakuChat_S">
 				<p slot="description">
 					Under “Identity & Settings > Password & Recovery” I can change my password, backup my
-					recovery phrase or disconnected my identity from the current browser.
+					recovery phrase or disconnect my identity from the current browser.
 				</p>
 			</DetailSection>
 		</div>

@@ -138,7 +138,7 @@
 	<section id="add-to-chat">
 		<DetailSection title="Adding to Chat" section="01" imgPattern="PayggyS">
 			<p slot="description">
-				A new Payggy instance can be added to any chat by using the “+” button, close the message
+				A new Payggy instance can be added to any chat by using the “+” button, next to the message
 				input. In a private chat, the recipient is the other person in the chat. If Payggy is
 				inserted in a group chat, the next step will be to choose who to meet.
 			</p>
