@@ -209,8 +209,8 @@
 	<section id="safemeet-full-view">
 		<DetailSection title="SafeMeet full view" section="06" imgPattern="SafeMeet_S">
 			<p slot="description">
-				SafeMeet will post messages to the chat when a new meeting invite is sent, when a meeting
-				invite is accepted or declined and when a previously accepted meeting is cancelled.
+				By tapping on any SafeMeet instance I can access the Waku Object full view, where more
+				information and actions are available.
 			</p>
 		</DetailSection>
 		<div id="safemeet-confirmed">
