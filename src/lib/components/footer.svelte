@@ -13,8 +13,8 @@
 			</p>
 			<p>
 				Logos Innovation Lab prototypes open source technology that promotes peaceful coordination
-				using the <u>Logos</u> stack, so humans can voluntarily find each other, communicate, and transact
-				value.
+				using the <a href="https://logos.co/" target="_blank">Logos</a> stack, so humans can voluntarily
+				find each other, communicate, and transact value.
 			</p>
 			<div class="logo">
 				<Button
