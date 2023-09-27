@@ -145,7 +145,7 @@
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
 						<Button
 							variant="strong"
-							on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+							on:click={() => window.open('https://chat.wakuplay.im/', '_blank')}
 						>
 							<Launch />
 							Try Waku Chat
