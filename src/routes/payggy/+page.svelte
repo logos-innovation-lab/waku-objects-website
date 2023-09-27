@@ -9,8 +9,8 @@
 	import CollapseItem from '$lib/components/collapse-item.svelte'
 
 	// Icons
-	import Launch from '$lib/components/icons/launch.svelte'
-	import LogoGithub from '$lib/components/icons/logo-github.svelte'
+	// import Launch from '$lib/components/icons/launch.svelte'
+	// import LogoGithub from '$lib/components/icons/logo-github.svelte'
 	import Calibrate from '$lib/components/icons/calibrate.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
