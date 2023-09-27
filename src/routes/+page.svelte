@@ -102,7 +102,7 @@
 				</svelte:fragment>
 			</WakuObject>
 			<WakuObject name="Swarm City" bgColor="#FEEA16" onClick={() => window.open('/swarm-city')}>
-				<LogoSwarmcity title="Swarm City object logo" slot="image" />
+				<LogoSwarmcity title="Swarm City object logo" slot="image" color="#3F3F3F" />
 				<svelte:fragment slot="description">
 					<p>
 						Whatever you need, whenever you need it: ask for it in a group chat, users can respond
