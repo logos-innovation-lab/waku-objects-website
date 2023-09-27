@@ -285,18 +285,18 @@
 			wakuplay.im/chat or contribute on Github. Waku chat is released under license terms.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button
-				variant="strong"
-				on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
-			>
+			<Button variant="strong" on:click={() => window.open('https://chat.wakuplay.im/', '_blank')}>
 				<Launch />
-				Try now
+				Try
 			</Button>
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			<!-- <Button
+				on:click={() =>
+					window.open('https://github.com/logos-innovation-lab/waku-objects-playground', '_blank')}
+			>
 				<LogoGithub />
 				Github
-			</Button>
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			</Button> -->
+			<Button on:click={() => window.open('/design')}>
 				<Calibrate />
 				Design specs
 			</Button>
