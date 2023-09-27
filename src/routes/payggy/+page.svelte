@@ -118,7 +118,7 @@
 			contribute on Github. Payggy is released under MIT license.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button
+			<!-- <Button
 				variant="strong"
 				on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
 			>
@@ -128,8 +128,8 @@
 			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
 				<LogoGithub />
 				Github
-			</Button>
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			</Button> -->
+			<Button link="/design">
 				<Calibrate />
 				Design specs
 			</Button>

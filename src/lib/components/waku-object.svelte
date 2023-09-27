@@ -6,16 +6,15 @@
 	export let status: string | undefined = undefined
 	export let bgColor: string | undefined = undefined
 	export let bgImage: string | undefined = undefined
-	export let onClick: () => unknown
+	export let link: string | undefined = undefined
 </script>
 
 <Container gap={24} padX={0} padY={0}>
 	{#if $$slots.image}
 		<!-- svelte-ignore a11y-invalid-attribute -->
 		<a
-			href="javascript:void(0)"
-			on:click={() => onClick()}
-			on:keydown={() => onClick()}
+			href={link}
+			target="_blank"
 			class="img"
 			style={`${bgColor ? 'background-color: ' + bgColor + ';' : ''} ${
 				bgImage ? 'background-image: url("' + bgImage + '"");' : ''

@@ -158,7 +158,7 @@
 			to our building guidelines.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			<Button link="/design">
 				<Calibrate />
 				Design specs
 			</Button>
@@ -167,9 +167,9 @@
 	<section id="add-to-chat">
 		<DetailSection title="Adding to Chat" section="01" imgPattern="SafeMeet_S">
 			<p slot="description">
-				A new SafeMeet instance can be added to any chat by using the “+” button, next to the message
-				input. In a private chat, the meeting will be organised with the other chat member. If
-				SafeMeet is added to a group chat, the next step will be to choose who to meet.
+				A new SafeMeet instance can be added to any chat by using the “+” button, next to the
+				message input. In a private chat, the meeting will be organised with the other chat member.
+				If SafeMeet is added to a group chat, the next step will be to choose who to meet.
 			</p>
 		</DetailSection>
 		<div id="add-date">

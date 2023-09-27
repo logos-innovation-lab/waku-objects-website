@@ -200,7 +200,7 @@
 			refer to our building guidelines.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			<Button link="/design">
 				<Calibrate />
 				Design specs
 			</Button>

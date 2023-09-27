@@ -1,21 +1,21 @@
 <script lang="ts">
 	export let variant: '' | 'icon' | 'strong' | 'subtle' | 'overlay' = ''
-	export let disabled: boolean | undefined = undefined
 	export let grow = false
 	export let active = false
+	export let link: string | undefined = undefined
 </script>
 
-<button
-	type="button"
-	{disabled}
+<a
+	href={link}
+	target="_blank"
 	class={`${variant} ${grow ? 'grow' : ''} ${active ? 'active' : ''} `}
 	on:click
 >
 	<slot />
-</button>
+</a>
 
 <style lang="scss">
-	button {
+	a {
 		background: var(--transparent);
 		border: 1px solid var(--color-low);
 		border-radius: var(--border-radius);
