@@ -145,7 +145,7 @@
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
 						<Button
 							variant="strong"
-							on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}
+							on:click={() => window.open('https://chat.wakuplay.im/', '_blank')}
 						>
 							<Launch />
 							Try Waku Chat
@@ -181,7 +181,7 @@
 						experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button variant="strong" on:click={() => window.open('/learn')}>
+						<Button variant="strong" on:click={() => window.open('/design')}>
 							<Launch />
 							Learn how to build
 						</Button>
@@ -189,7 +189,7 @@
 				</Container>
 			</div>
 			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="javascript:void(0)" on:click={() => window.open('/learn')} style="border: none;">
+			<a href="javascript:void(0)" on:click={() => window.open('/design')} style="border: none;">
 				<div class="img" />
 			</a>
 		</div>
