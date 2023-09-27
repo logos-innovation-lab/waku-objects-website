@@ -18,12 +18,8 @@
 			</p>
 			<div class="logo">
 				<Button
+					link="https://github.com/logos-innovation-lab/waku-objects-playground"
 					variant="icon"
-					on:click={() =>
-						window.open(
-							'https://github.com/logos-innovation-lab/waku-objects-playground',
-							'_blank',
-						)}
 				>
 					<LogoGithub size={24} color="var(--color-ultraLow)" />
 				</Button>

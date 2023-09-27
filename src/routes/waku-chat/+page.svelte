@@ -12,7 +12,7 @@
 
 	// Icons
 	import Launch from '$lib/components/icons/launch.svelte'
-	import LogoGithub from '$lib/components/icons/logo-github.svelte'
+	// import LogoGithub from '$lib/components/icons/logo-github.svelte'
 	import Calibrate from '$lib/components/icons/calibrate.svelte'
 	import ChatBot from '$lib/components/icons/chat-bot.svelte'
 
@@ -285,7 +285,7 @@
 			wakuplay.im/chat or contribute on Github. Waku chat is released under license terms.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button variant="strong" on:click={() => window.open('https://chat.wakuplay.im/', '_blank')}>
+			<Button variant="strong" link="https://chat.wakuplay.im/">
 				<Launch />
 				Try
 			</Button>
@@ -296,7 +296,7 @@
 				<LogoGithub />
 				Github
 			</Button> -->
-			<Button on:click={() => window.open('/design')}>
+			<Button link="/design">
 				<Calibrate />
 				Design specs
 			</Button>

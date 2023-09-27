@@ -50,7 +50,7 @@
 	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Objects</h3>
 		<div class="grid">
-			<WakuObject name="Payggy" bgColor="#91ff76" onClick={() => window.open('/payggy')}>
+			<WakuObject name="Payggy" bgColor="#91ff76" link="/payggy">
 				<LogoPayggy title="Payggy object logo" slot="image" color="#0065CC" />
 
 				<svelte:fragment slot="description">
@@ -60,17 +60,13 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => window.open('/payggy')}>
+					<Button link="/payggy">
 						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject
-				name="SafeMeet"
-				bgColor="var(--color-ultraHigh)"
-				onClick={() => window.open('/safemeet')}
-			>
+			<WakuObject link="/safemeet" name="SafeMeet" bgColor="var(--color-ultraHigh)">
 				<LogoSafemeet title="SafeMeet object logo" slot="image" color="#FF6128" />
 				<svelte:fragment slot="description">
 					<p>
@@ -80,13 +76,13 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => window.open('/safemeet')}>
+					<Button link="/safemeet">
 						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Split" bgColor="#0065CC" onClick={() => window.open('/split')}>
+			<WakuObject name="Split" bgColor="#0065CC" link="/split">
 				<LogoSplit title="Split object logo" slot="image" />
 				<svelte:fragment slot="description">
 					<p>
@@ -95,13 +91,13 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => window.open('/split')}>
+					<Button link="/split">
 						<Info />
 						Learn more
 					</Button>
 				</svelte:fragment>
 			</WakuObject>
-			<WakuObject name="Swarm City" bgColor="#FEEA16" onClick={() => window.open('/swarm-city')}>
+			<WakuObject name="Swarm City" bgColor="#FEEA16" link="/swarm-city">
 				<LogoSwarmcity title="Swarm City object logo" slot="image" color="#3F3F3F" />
 				<svelte:fragment slot="description">
 					<p>
@@ -111,7 +107,7 @@
 					</p>
 				</svelte:fragment>
 				<svelte:fragment slot="buttons">
-					<Button on:click={() => window.open('/swarm-city')}>
+					<Button link="/swarm-city">
 						<Info />
 						Learn more
 					</Button>
@@ -128,7 +124,7 @@
 		<h3 class="section-title">Waku Chat</h3>
 		<div class="grid">
 			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="javascript:void(0)" on:click={() => window.open('/waku-chat')} style="border: none;">
+			<a href="/waku-chat" style="border: none;">
 				<div class="img" />
 			</a>
 			<div class="content">
@@ -143,14 +139,11 @@
 						widgets called Waku Objects.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button
-							variant="strong"
-							on:click={() => window.open('https://chat.wakuplay.im/', '_blank')}
-						>
+						<Button link="https://chat.wakuplay.im/" variant="strong">
 							<Launch />
 							Try Waku Chat
 						</Button>
-						<Button on:click={() => window.open('/waku-chat')}>
+						<Button link="/waku-chat">
 							<Info />
 							Learn more
 						</Button>
@@ -181,15 +174,14 @@
 						experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button variant="strong" on:click={() => window.open('/design')}>
+						<Button variant="strong" link="/design">
 							<Launch />
 							Learn how to build
 						</Button>
 					</Container>
 				</Container>
 			</div>
-			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="javascript:void(0)" on:click={() => window.open('/design')} style="border: none;">
+			<a href="/design" style="border: none;">
 				<div class="img" />
 			</a>
 		</div>
