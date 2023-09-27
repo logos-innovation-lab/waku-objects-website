@@ -123,8 +123,7 @@
 	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Chat</h3>
 		<div class="grid">
-			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="/waku-chat" style="border: none;">
+			<a href="/waku-chat" target="_blank" style="border: none;">
 				<div class="img" />
 			</a>
 			<div class="content">

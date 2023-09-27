@@ -32,6 +32,8 @@
 				out:fade={{ duration: 100, easing: cubicOut }}
 			>
 				<Drawer>
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div class="page-title">
 						<div class="icon" style={`background-color: ${iconBg};`}>
 							<slot name="icon" />

@@ -20,14 +20,17 @@
 
 	$: innerWidth = 0
 	$: sidebar_show = innerWidth >= 688 ? true : false
-	console.log(sidebar_show)
+
 	function toggle() {
-		sidebar_show = !sidebar_show
+		if (innerWidth < 688) {
+			sidebar_show = !sidebar_show
+		}
 	}
 </script>
 
 <svelte:window bind:innerWidth />
 
+<div id="intro" />
 <Layout bind:open={sidebar_show}>
 	<ChatBot slot="icon" />
 	<div slot="title">Waku Chat</div>
