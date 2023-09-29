@@ -190,14 +190,18 @@
 	<PageHeader bgColor="#FEEA16" slot="pageheader">
 		<LogoSwarmcity size={180} color="#3F3F3F" slot="image" title="Swarm City logo" />
 		<p slot="first">
-			Swarm City is a Waku Object concept for swarm.city, a blockchain based marketplace with a
-			built in reputation system. With the Swarm City Waku Object, it becomes possible to use a
-			marketplace without leaving Waku Chat.
+			Swarm City is a Waku Object concept for <a href="https://swarm.city/" target="_blank"
+				>swarm.city</a
+			>, a blockchain based marketplace with a built in reputation system. With the Swarm City Waku
+			Object, it becomes possible to use a marketplace without leaving Waku Chat.
 		</p>
 		<p slot="second">
 			This page is an in-depth presentation of Swarm City. This Waku Object is currently a concept.
 			If you would like to contribute or build it, you can use the provided design material and
-			refer to our building guidelines.
+			refer to our <a
+				href="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
+				target="_blank">building guidelines</a
+			>.
 		</p>
 	</PageHeader>
 	<section id="add-to-chat">

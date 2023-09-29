@@ -114,11 +114,12 @@
 			Payggy is a Waku Object allowing to send money to chat members within Waku Chat.
 		</p>
 		<p slot="second">
-			This page is an in-depth presentation of Payggy. You can try the latest build on link or
-			contribute on Github. Payggy is released under <a
-				href="https://opensource.org/license/mit/"
-				target="_blank">MIT license</a
-			>.
+			This page is an in-depth presentation of Payggy. You can try the latest build in <a
+				href="https://www.wakuplay.im/"
+				target="_blank">Waku Chat</a
+			>
+			or contribute on Github. Payggy is released under
+			<a href="https://opensource.org/license/mit/" target="_blank">MIT license</a>.
 		</p>
 		<svelte:fragment slot="buttons">
 			<Button variant="strong" link="https://chat.wakuplay.im/">
