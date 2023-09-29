@@ -157,12 +157,6 @@
 			you would like to contribute or build it, you can use the provided design material and refer
 			to our building guidelines.
 		</p>
-		<svelte:fragment slot="buttons">
-			<Button link="/design">
-				<Calibrate />
-				Design specs
-			</Button>
-		</svelte:fragment>
 	</PageHeader>
 	<section id="add-to-chat">
 		<DetailSection title="Adding to Chat" section="01" imgPattern="SafeMeet_S">
