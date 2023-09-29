@@ -1,6 +1,5 @@
 <script lang="ts">
 	// Components
-	import Button from '$lib/components/button.svelte'
 	import Footer from '$lib/components/footer.svelte'
 	import PageHeader from '$lib/components/page-header.svelte'
 	import DetailSection from '$lib/components/detail-section.svelte'
@@ -9,13 +8,9 @@
 	import CollapseItem from '$lib/components/collapse-item.svelte'
 
 	// Icons
-	// import Launch from '$lib/components/icons/launch.svelte'
-	// import LogoGithub from '$lib/components/icons/logo-github.svelte'
-	import Calibrate from '$lib/components/icons/calibrate.svelte'
+	import LogoGuidelines from '$lib/components/icons/logo-ui-guidelines.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
-	import LogoPayggy from '$lib/components/icons/logo-payggy.svelte'
-	import LogoGuidelines from '$lib/components/icons/logo-ui-guidelines.svelte'
 
 	$: innerWidth = 0
 	$: sidebar_show = innerWidth >= 688 ? true : false
