@@ -155,7 +155,10 @@
 		<p slot="second">
 			This page is an in-depth presentation of SafeMeet. This Waku Object is currently a concept. If
 			you would like to contribute or build it, you can use the provided design material and refer
-			to our building guidelines.
+			to our <a
+				href="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
+				target="_blank">building guidelines</a
+			>
 		</p>
 	</PageHeader>
 	<section id="add-to-chat">
