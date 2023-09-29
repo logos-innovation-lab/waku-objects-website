@@ -26,6 +26,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Payggy</title>
+	<meta
+		name="description"
+		content="Payggy is a Waku Object allowing to send money to chat members within Waku Chat."
+	/>
+</svelte:head>
+
 <svelte:window bind:innerWidth />
 
 <Layout iconBg="#91FF76" bind:open={sidebar_show}>
