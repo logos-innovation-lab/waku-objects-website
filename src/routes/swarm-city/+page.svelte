@@ -35,7 +35,7 @@
 <svelte:window bind:innerWidth />
 
 <Layout iconBg="#FEEA16" bind:open={sidebar_show}>
-	<LogoSwarmcity size={26} color="#3F3F3F" slot="icon" title="Swarm City logo" />
+	<LogoSwarmcity size={24} color="#3F3F3F" slot="icon" title="Swarm City logo" />
 	<div slot="title">Swarm City</div>
 	<svelte:fragment slot="content">
 		<Collapse>
