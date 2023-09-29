@@ -158,7 +158,7 @@
 			to our <a
 				href="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
 				target="_blank">building guidelines</a
-			>
+			>.
 		</p>
 	</PageHeader>
 	<section id="add-to-chat">
