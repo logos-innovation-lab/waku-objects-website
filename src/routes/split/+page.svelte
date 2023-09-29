@@ -1,7 +1,6 @@
 <script lang="ts">
 	// Components
 	import Button from '$lib/components/button.svelte'
-	import Divider from '$lib/components/divider.svelte'
 	import Footer from '$lib/components/footer.svelte'
 	import PageHeader from '$lib/components/page-header.svelte'
 	import DetailSection from '$lib/components/detail-section.svelte'
@@ -41,6 +40,22 @@
 					}}
 				>
 					Adding to Chat
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#creating-collection'))
+						toggle()
+					}}
+				>
+					Creating a new expenses collection
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#choosing-collection'))
+						toggle()
+					}}
+				>
+					Choosing an existing collection
 				</CollapseItem>
 				<CollapseItem
 					onClick={() => {
@@ -102,6 +117,14 @@
 				</CollapseItem>
 				<CollapseItem
 					onClick={() => {
+						scroll(document.querySelector('#split-add-expense'))
+						toggle()
+					}}
+				>
+					Adding an expense to an existing collection
+				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
 						scroll(document.querySelector('#split-summary'))
 						toggle()
 					}}
@@ -124,6 +147,14 @@
 				>
 					Activity history
 				</CollapseItem>
+				<CollapseItem
+					onClick={() => {
+						scroll(document.querySelector('#members'))
+						toggle()
+					}}
+				>
+					Members
+				</CollapseItem>
 			</svelte:fragment>
 		</Collapse>
 		<CollapseItem
@@ -142,12 +173,15 @@
 			Split is a Waku Object allowing group chat members to collect and settle shared expenses.
 		</p>
 		<p slot="second">
-			This page is an in-depth presentation of Split. This Waku Object is currently a concept. If
-			you would like to contribute or build it, you can use the provided design material and refer
-			to our building guidelines.
+			This page is an in-depth presentation of Split. You can try the latest build in <a
+				href="https://www.wakuplay.im/"
+				target="_blank">Waku Chat</a
+			>
+			or contribute on Github. Split is released under
+			<a href="https://opensource.org/license/mit/" target="_blank">MIT license</a>.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button link="https://chat.wakuplay.im/">
+			<Button variant="strong" link="https://chat.wakuplay.im/">
 				<Calibrate />
 				Try it in Waku Chat
 			</Button>
@@ -160,16 +194,39 @@
 				message input.
 			</p>
 		</DetailSection>
-		<div id="add-paid-amount">
-			<DetailSection title="Adding paid amount" sub section="02" imgPattern="Split_S">
+		<div id="creating-collection">
+			<DetailSection
+				title="Creating a new expenses collection"
+				sub
+				section="02"
+				imgPattern="Split_S"
+			>
 				<p slot="description">
-					The first thing I have to do is enter the paid amount for the expense I would like to
-					share with the group.
+					Shared expenses are organized into collections. As a first step, I have to choose between
+					creating a new collection or adding a shared expense to an existing collection. A new
+					collection is shared with everyone in the chat.
+				</p>
+			</DetailSection>
+		</div>
+		<div id="choosing-collection">
+			<DetailSection title="Choosing an existing collection" sub section="03" imgPattern="Split_S">
+				<p slot="description">
+					From the initial screen, I can also choose to add an expense to an existing collection.
+					Note that this can also be done directly by accessing any expense collection from the
+					chat.
+				</p>
+			</DetailSection>
+		</div>
+		<div id="add-paid-amount">
+			<DetailSection title="Adding paid amount" sub section="04" imgPattern="Split_S">
+				<p slot="description">
+					After creating (or selecting) an expenses collection, I have to enter the paid amount for
+					the expense I would like to share.
 				</p>
 			</DetailSection>
 		</div>
 		<div id="add-details">
-			<DetailSection title="Adding expense details" sub section="03" imgPattern="Split_S">
+			<DetailSection title="Adding expense details" sub section="05" imgPattern="Split_S">
 				<p slot="description">
 					After adding the paid amount, I need to add a short description. I can also add images,
 					but this is optional.
@@ -177,7 +234,7 @@
 			</DetailSection>
 		</div>
 		<div id="add-summary">
-			<DetailSection title="Summary" sub last section="04" imgPattern="Split_S">
+			<DetailSection title="Summary" sub last section="06" imgPattern="Split_S">
 				<p slot="description">
 					The summary view allows me to check the expense details I provided, before adding to the
 					chat. The current version assumes that there's only a default collection of expenses for
@@ -187,16 +244,15 @@
 			</DetailSection>
 		</div>
 	</section>
-	<Divider short />
 	<section id="in-chat-messages">
-		<DetailSection title="In-chat messages" section="05" imgPattern="Split_S">
+		<DetailSection title="In-chat messages" section="07" imgPattern="Split_S">
 			<p slot="description">
 				Split will post messages to the chat only when a new shared expense is added and when
 				someone requests to settle.
 			</p>
 		</DetailSection>
 		<div id="in-chat-expense-page">
-			<DetailSection title="Expense page (standalone)" sub last section="06" imgPattern="Split_S">
+			<DetailSection title="Expense page (standalone)" sub last section="08" imgPattern="Split_S">
 				<p slot="description">
 					From the in-chat message, it's possible to view the expense details directly. The expense
 					page displays the expense details, key actions and a link to view the whole accounting for
@@ -205,17 +261,28 @@
 			</DetailSection>
 		</div>
 	</section>
-	<Divider short />
 	<section id="split-full-view">
-		<DetailSection title="Split full view" section="07" imgPattern="Split_S">
+		<DetailSection title="Split full view" section="09" imgPattern="Split_S">
 			<p slot="description">
-				By tapping on any Split instance I can access the Waku Object full view, where more
+				By tapping on any Swarm City instance I can access the Waku Object full view, where more
 				information and actions are available. The Split full view has three subpages: “Payments
 				summary”, “All expenses” and “Activity history”.
 			</p>
 		</DetailSection>
+		<div id="split-add-expense">
+			<DetailSection
+				title="Adding an expense to an existing collection"
+				sub
+				section="10"
+				imgPattern="Split_S"
+			>
+				<p slot="description">
+					From the collection view I can add a new shared expense to that collection.
+				</p>
+			</DetailSection>
+		</div>
 		<div id="split-summary">
-			<DetailSection title="Payments summary" sub section="08" imgPattern="Split_S">
+			<DetailSection title="Payments summary" sub section="11" imgPattern="Split_S">
 				<p slot="description">
 					The “Payments summary” view displays the current payment balance for each group member. In
 					the footer I can see my current payment balance along with the option to settle, or ask to
@@ -224,7 +291,7 @@
 			</DetailSection>
 		</div>
 		<div id="split-all-expenses">
-			<DetailSection title="All expenses" sub section="09" imgPattern="Split_S">
+			<DetailSection title="All expenses" sub section="12" imgPattern="Split_S">
 				<p slot="description">
 					The “All expenses” view displays a list of all shared expense within a collection. By
 					tapping on any expense I can access the expense details view. Note that it's possible to
@@ -233,17 +300,25 @@
 			</DetailSection>
 		</div>
 		<div id="split-history">
-			<DetailSection title="Activity history" sub last section="10" imgPattern="Split_S">
+			<DetailSection title="Activity history" sub section="13" imgPattern="Split_S">
 				<p slot="description">
 					By default, only the latest or new (unseen) activity is displayed on top of the full view.
 					All activity related to a Split instance can be viewed in the “Activity history” view.
 				</p>
 			</DetailSection>
 		</div>
+		<div id="members">
+			<DetailSection title="Members" sub last section="14" imgPattern="Split_S">
+				<p slot="description">
+					Under the “Members” section I can see a list of all the people that are in that
+					collection. Every shared expense added to that collection will be split equally between
+					all members.
+				</p>
+			</DetailSection>
+		</div>
 	</section>
-	<Divider short />
 	<section id="settling-up">
-		<DetailSection title="Settling up" section="11" imgPattern="Split_S">
+		<DetailSection title="Settling up" section="15" imgPattern="Split_S">
 			<p slot="description">
 				I can request group members to settle up, this will send an anonymous message in the group
 				chat with a “Settle now” button for those who owe money. It's also possible to settle up at

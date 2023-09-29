@@ -32,14 +32,16 @@
 <section id="intro">
 	<Container padY={0} size="normal">
 		<h1>
-			Waku Play is a system of Waku Objects that can be added to <a href="#chat">Waku Chat</a>. Chat
-			members interact with Waku Objects to execute specific transactional cryptographic protocols,
-			directly within the chat interface.
+			Waku Objects are mini-applications that can be added to a host chat application and extend its
+			functionalities. People interact with Waku Objects within the chat to execute specific
+			transactional cryptographic protocols.
 		</h1>
 		<h2>
-			Waku Play is open source and free. It is decentralised, privacy preserving and censorship
-			resistant. Built on <a href="https://waku.org/" target="_blank">Waku</a> — a decentralised messaging
-			protocol.
+			Waku Play includes Waku Chat, a basic chat application and a set of Waku Objects that can be
+			integrated to the chat application. Waku Play is a proof-of-concept built on <a
+				href="https://waku.org/"
+				target="_blank">Waku</a
+			>, a decentralised messaging protocol.
 		</h2>
 	</Container>
 </section>

@@ -75,7 +75,9 @@
 </div>
 
 {#if last}
-	<Divider short />
+	<Container padY={0} padX={24} size="detail">
+		<Divider />
+	</Container>
 {/if}
 
 <style lang="scss">
