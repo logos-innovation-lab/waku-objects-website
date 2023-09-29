@@ -12,8 +12,6 @@
 
 	// Icons
 	import Launch from '$lib/components/icons/launch.svelte'
-	// import LogoGithub from '$lib/components/icons/logo-github.svelte'
-	import Calibrate from '$lib/components/icons/calibrate.svelte'
 	import ChatBot from '$lib/components/icons/chat-bot.svelte'
 
 	import { scroll } from '$lib/utils/pageScroll'
@@ -284,7 +282,6 @@
 		</CollapseItem>
 	</svelte:fragment>
 	<PageHeader bgColor="#404040" slot="pageheader" bgImage="/images/waku_chat_cover.png">
-		<!-- <img src="/images/waku_chat_cover.png" alt="Waku Chat banner" slot="image" /> -->
 		<p slot="first">
 			Waku Chat is a simple chat application built on Waku. Waku Objects can be added to Waku Chat.
 		</p>
