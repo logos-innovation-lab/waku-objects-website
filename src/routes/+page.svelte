@@ -46,6 +46,42 @@
 <Container padY={0} size="normal">
 	<Divider padTop={48} />
 </Container>
+<section id="chat">
+	<Container padY={48} size="normal">
+		<h3 class="section-title">Waku Chat</h3>
+		<div class="grid">
+			<a href="/waku-chat" target="_blank" style="border: none;">
+				<div class="img" />
+			</a>
+			<div class="content">
+				<Container padX={0} padY={0} gap={12}>
+					<p>
+						A simple chat application built on Waku. Initially created as a sandbox for developing
+						Waku Objects.
+					</p>
+					<p>
+						Waku Chat is a decentralised, censorship resistant and private communication app, with a
+						built-in crypto wallet. Users enhance their private and group chats with small app
+						widgets called Waku Objects.
+					</p>
+					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
+						<Button link="https://chat.wakuplay.im/" variant="strong">
+							<Launch />
+							Try Waku Chat
+						</Button>
+						<Button link="/waku-chat">
+							<Info />
+							Learn more
+						</Button>
+					</Container>
+				</Container>
+			</div>
+		</div>
+	</Container>
+</section>
+<Container padY={0} size="normal">
+	<Divider />
+</Container>
 <section id="objects">
 	<Container padY={48} size="normal">
 		<h3 class="section-title">Waku Objects</h3>
@@ -119,45 +155,9 @@
 <Container padY={0} size="normal">
 	<Divider />
 </Container>
-<section id="chat">
-	<Container padY={48} size="normal">
-		<h3 class="section-title">Waku Chat</h3>
-		<div class="grid">
-			<a href="/waku-chat" target="_blank" style="border: none;">
-				<div class="img" />
-			</a>
-			<div class="content">
-				<Container padX={0} padY={0} gap={12}>
-					<p>
-						A simple chat application built on Waku. Initially created as a sandbox for developing
-						Waku Objects.
-					</p>
-					<p>
-						Waku Chat is a decentralised, censorship resistant and private communication app, with a
-						built-in crypto wallet. Users enhance their private and group chats with small app
-						widgets called Waku Objects.
-					</p>
-					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button link="https://chat.wakuplay.im/" variant="strong">
-							<Launch />
-							Try Waku Chat
-						</Button>
-						<Button link="/waku-chat">
-							<Info />
-							Learn more
-						</Button>
-					</Container>
-				</Container>
-			</div>
-		</div>
-	</Container>
-</section>
-<Container padY={0} size="normal">
-	<Divider />
-</Container>
 <section id="guidelines">
 	<Container padY={48} size="normal">
-		<h3 class="section-title">Design Guidelines</h3>
+		<h3 class="section-title">Guidelines</h3>
 		<div class="grid">
 			<div class="content">
 				<Container padX={0} padY={0} gap={12}>
@@ -166,11 +166,19 @@
 						Chat.
 					</p>
 					<p>
-						<!-- svelte-ignore a11y-invalid-attribute -->
-						<!-- FIXME: ADD CORRECT LINK -->
-						Get started by cloning the repository for <a href="#">Waku Chat</a>, or dive into the
-						documentation and design guidelines. They exist to promote consistency in code and user
-						experience.
+						Get started by <a
+							href="https://github.com/logos-innovation-lab/waku-objects-playground"
+							target="_blank">cloning the repository</a
+						>
+						for
+						<a href="/waku-chat" target="_blank">Waku Chat</a>, or dive into the
+						<a
+							href="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
+							target="_blank">documentation</a
+						>
+						and
+						<a href="/design" target="_blank">design guidelines</a>. They exist to promote
+						consistency in code and user experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
 						<Button variant="strong" link="/design">
@@ -180,7 +188,7 @@
 					</Container>
 				</Container>
 			</div>
-			<a href="/design" style="border: none;">
+			<a href="/design" target="_blank" style="border: none;">
 				<div class="img" />
 			</a>
 		</div>

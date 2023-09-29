@@ -8,7 +8,7 @@
 	export let title: string | undefined = undefined
 	export let sub: boolean | undefined = false
 	export let last: boolean | undefined = false
-	export let section: string | undefined
+	export let section: string | undefined = undefined
 	export let imgPattern: string | undefined = undefined
 
 	let galleryController: any
@@ -21,9 +21,11 @@
 </script>
 
 <div class={`section-wrapper ${sub ? 'sub' : ''} ${last ? 'last' : ''}`}>
-	<div class="section-intro">
-		<Container padX={24} padY={48} gap={12}>
-			<h3 class={`section-title ${sub ? 'sub' : ''}`}>{title}</h3>
+	<div class={`section-intro ${section ? '' : 'no-img'}`}>
+		<Container padX={24} padY={0} gap={12}>
+			{#if title}
+				<h3 class={`section-title ${sub ? 'sub' : ''}`}>{title}</h3>
+			{/if}
 			<slot name="description" />
 		</Container>
 	</div>
@@ -61,6 +63,15 @@
 			</Button>
 		</div>
 	{/if}
+	{#if $$slots.extra}
+		<div class={`section-intro extra`}>
+			<Container padX={24} padY={0} gap={12}>
+				<div class="extra">
+					<slot name="extra" />
+				</div>
+			</Container>
+		</div>
+	{/if}
 </div>
 
 {#if last}
@@ -71,6 +82,15 @@
 	.section-title {
 		font-size: var(--font-size-lg);
 		font-weight: var(--font-weight-700);
+	}
+
+	.section-intro {
+		padding-block: var(--spacing-48);
+
+		&.no-img,
+		&.extra {
+			padding-bottom: 0;
+		}
 	}
 
 	.sub {
