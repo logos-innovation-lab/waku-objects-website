@@ -24,6 +24,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Split</title>
+	<meta
+		name="description"
+		content="Split is a Waku Object allowing group chat members to collect and settle shared expenses."
+	/>
+</svelte:head>
+
 <svelte:window bind:innerWidth />
 
 <Layout iconBg="#0065CC" bind:open={sidebar_show}>

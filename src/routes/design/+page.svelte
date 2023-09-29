@@ -19,13 +19,20 @@
 
 	$: innerWidth = 0
 	$: sidebar_show = innerWidth >= 688 ? true : false
-	console.log(sidebar_show)
 	function toggle() {
 		if (innerWidth < 688) {
 			sidebar_show = !sidebar_show
 		}
 	}
 </script>
+
+<svelte:head>
+	<title>Guidelines</title>
+	<meta
+		name="description"
+		content="This page contains key information to help you design and build your own Waku Objects."
+	/>
+</svelte:head>
 
 <svelte:window bind:innerWidth />
 

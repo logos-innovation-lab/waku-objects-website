@@ -28,6 +28,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Waku Chat</title>
+	<meta name="description" content="Waku Chat is a simple chat application built on Waku." />
+</svelte:head>
+
 <svelte:window bind:innerWidth />
 
 <div id="intro" />

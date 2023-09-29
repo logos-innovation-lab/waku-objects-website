@@ -24,6 +24,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Swarm City</title>
+	<meta
+		name="description"
+		content="Swarm City is a Waku Object concept for swarm.city, a blockchain based marketplace with a built in reputation system. With the Swarm City Waku Object, it becomes possible to use a marketplace without leaving Waku Chat."
+	/>
+</svelte:head>
+
 <svelte:window bind:innerWidth />
 
 <Layout iconBg="#FEEA16" bind:open={sidebar_show}>

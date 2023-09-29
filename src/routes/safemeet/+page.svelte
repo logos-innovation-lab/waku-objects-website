@@ -24,6 +24,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>SafeMeet</title>
+	<meta
+		name="description"
+		content="SafeMeet is a Waku Object helping people to arrange in-person meetings, with an emphasis on safety and privacy."
+	/>
+</svelte:head>
+
 <svelte:window bind:innerWidth />
 
 <Layout iconBg="#3f3f3f" bind:open={sidebar_show}>

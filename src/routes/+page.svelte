@@ -19,6 +19,14 @@
 	import { scroll } from '$lib/utils/pageScroll'
 </script>
 
+<svelte:head>
+	<title>Waku Play</title>
+	<meta
+		name="description"
+		content="Waku Objects are mini-applications that can be added to a host chat application and extend its functionalities. People interact with Waku Objects within the chat to execute specific transactional cryptographic protocols."
+	/>
+</svelte:head>
+
 <Header
 	title="Waku Play"
 	onClick={() => {
