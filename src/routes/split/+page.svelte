@@ -147,9 +147,9 @@
 			to our building guidelines.
 		</p>
 		<svelte:fragment slot="buttons">
-			<Button on:click={() => window.open('https://waku-objects-playground.vercel.app/', '_blank')}>
+			<Button link="https://chat.wakuplay.im/">
 				<Calibrate />
-				Design specs
+				Try it in Waku Chat
 			</Button>
 		</svelte:fragment>
 	</PageHeader>

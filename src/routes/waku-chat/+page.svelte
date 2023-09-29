@@ -290,18 +290,7 @@
 		<svelte:fragment slot="buttons">
 			<Button variant="strong" link="https://chat.wakuplay.im/">
 				<Launch />
-				Try
-			</Button>
-			<!-- <Button
-				on:click={() =>
-					window.open('https://github.com/logos-innovation-lab/waku-objects-playground', '_blank')}
-			>
-				<LogoGithub />
-				Github
-			</Button> -->
-			<Button link="/design">
-				<Calibrate />
-				Design specs
+				Try Waku Chat
 			</Button>
 		</svelte:fragment>
 	</PageHeader>

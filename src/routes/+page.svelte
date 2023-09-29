@@ -181,9 +181,15 @@
 						consistency in code and user experience.
 					</p>
 					<Container padX={0} padY={12} gap={12} direction="row" alignItems="center">
-						<Button variant="strong" link="/design">
+						<Button link="/design">
 							<Launch />
-							Learn how to build
+							Design Guidelines
+						</Button>
+						<Button
+							link="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
+						>
+							<Launch />
+							Developer Guidelines
 						</Button>
 					</Container>
 				</Container>
