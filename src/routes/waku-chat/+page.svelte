@@ -281,7 +281,11 @@
 			Desktop view
 		</CollapseItem>
 	</svelte:fragment>
-	<PageHeader bgColor="#404040" slot="pageheader" bgImage="/images/waku_chat_cover.png">
+	<PageHeader
+		bgColor="#404040"
+		slot="pageheader"
+		bgImage="/images/waku_chat_cover_lg.png /images/waku_chat_cover.png"
+	>
 		<p slot="first">
 			Waku Chat is a simple chat application built on Waku. Waku Objects can be added to Waku Chat.
 		</p>

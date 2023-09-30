@@ -315,7 +315,7 @@
 
 	#chat {
 		.img {
-			background-image: url('/images/waku_play_cover.svg');
+			background-image: url('/images/waku_chat_cover_crop.png');
 		}
 	}
 
@@ -330,7 +330,7 @@
 		}
 
 		.img {
-			background-image: url('/images/ui_guidelines_cover.svg');
+			background-image: url('/images/ui_guidelines_cover_crop.png');
 		}
 	}
 
