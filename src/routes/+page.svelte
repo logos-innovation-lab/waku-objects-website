@@ -316,6 +316,10 @@
 	#chat {
 		.img {
 			background-image: url('/images/waku_chat_cover_crop.png');
+			background-image: image-set(
+				url('/images/waku_chat_cover_crop.png') 1x,
+				url('/images/waku_chat_cover_crop_lg.png') 2x
+			);
 		}
 	}
 
@@ -331,6 +335,10 @@
 
 		.img {
 			background-image: url('/images/ui_guidelines_cover_crop.png');
+			// background-image: image-set(
+			// 	url('/images/ui_guidelines_cover_crop.png') 1x,
+			// 	url('/images/ui_guidelines_cover_crop_lg.png') 2x
+			// );
 		}
 	}
 
