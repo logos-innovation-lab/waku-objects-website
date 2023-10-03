@@ -173,7 +173,7 @@
 			Development
 		</CollapseItem>
 	</svelte:fragment>
-	<PageHeader bgColor="#F3F3F3" slot="pageheader" bgImage="/images/ui_guidelines_cover.png">
+	<PageHeader bgColor="#F3F3F3" slot="pageheader" bgImage="/images/ui_guidelines_cover.svg">
 		<p slot="second">
 			Waku Objects are mini-applications that can be added to a host application (typically a chat
 			app) and extend its functionalities. This page contains key information to help you design and
