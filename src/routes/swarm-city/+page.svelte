@@ -385,5 +385,5 @@
 			</p>
 		</DetailSection>
 	</section>
+	<Footer />
 </Layout>
-<Footer />
