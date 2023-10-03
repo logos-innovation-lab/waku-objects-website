@@ -105,7 +105,7 @@
 
 	.imgs-wrap {
 		background-color: var(--color-low);
-		padding: var(--spacing-24);
+		padding: var(--spacing-24) 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -127,10 +127,12 @@
 			flex-shrink: 0;
 
 			&:first-child {
+				padding-left: var(--spacing-24);
 				margin-left: auto;
 			}
 
 			&:last-child {
+				padding-right: var(--spacing-24);
 				margin-right: auto;
 			}
 		}
