@@ -70,7 +70,7 @@
 						Waku Objects.
 					</p>
 					<p>
-						Waku Chat is a decentralised, censorship resistant and private communication app, with a
+						Waku Chat is a decentralised, censorship-resistant and private communication app, with a
 						built-in crypto wallet. Users enhance their private and group chats with small app
 						widgets called Waku Objects.
 					</p>
