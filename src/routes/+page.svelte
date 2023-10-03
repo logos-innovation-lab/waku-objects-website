@@ -33,9 +33,7 @@
 		scroll(document.querySelector('#intro'), true)
 	}}
 >
-	<svelte:fragment slot="icon">
-		<WakuLogo size={48} title="Waku brand logo" />
-	</svelte:fragment>
+	<WakuLogo slot="icon" size={48} title="Waku brand logo" />
 </Header>
 <section id="intro">
 	<Container padY={0} size="normal">

@@ -8,6 +8,7 @@
 	import Menu from '$lib/components/icons/menu.svelte'
 	import SidePanelClose from '$lib/components/icons/side-panel-close.svelte'
 	import Close from './icons/close.svelte'
+	import { browser } from '$app/environment'
 
 	let layoutHeight
 
@@ -15,6 +16,15 @@
 	export let open = false
 	export function toggleDrawer() {
 		open = !open
+	}
+
+	export function scrollTop() {
+		if (browser) {
+			// On mobile, close the drawer before scrolling to top
+			if (show_close) toggleDrawer()
+
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}
 	}
 
 	$: innerWidth = 0
@@ -32,10 +42,15 @@
 				out:fade={{ duration: 100, easing: cubicOut }}
 			>
 				<Drawer>
-					<!-- svelte-ignore a11y-click-events-have-key-events -->
-					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div class="page-title">
-						<div class="icon" style={`background-color: ${iconBg};`}>
+						<div
+							class="icon"
+							role="button"
+							tabindex="0"
+							style={`background-color: ${iconBg};`}
+							on:click={scrollTop}
+							on:keypress={scrollTop}
+						>
 							<slot name="icon" />
 						</div>
 						<slot name="title" />
