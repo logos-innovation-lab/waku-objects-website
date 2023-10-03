@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Guidelines</title>
+	<title>Design Guidelines</title>
 	<meta
 		name="description"
 		content="This page contains key information to help you design and build your own Waku Objects."
@@ -38,7 +38,7 @@
 		slot="icon"
 		title="UI Design Guidelines logo"
 	/>
-	<div slot="title">Guidelines</div>
+	<div slot="title">Design Guidelines</div>
 	<svelte:fragment slot="content">
 		<Collapse>
 			<svelte:fragment slot="cl-header">Vision</svelte:fragment>
