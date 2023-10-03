@@ -45,11 +45,10 @@
 			transactional cryptographic protocols.
 		</h1>
 		<h2>
-			Waku Play includes Waku Chat, a basic chat application and a set of Waku Objects that can be
-			integrated to the chat application. Waku Play is a proof-of-concept built on <a
-				href="https://waku.org/"
-				target="_blank">Waku</a
-			>, a decentralised messaging protocol.
+			Waku Play includes <a href="/waku-chat" target="_blank">Waku Chat</a>, a basic chat
+			application and a set of Waku Objects that can be integrated to the chat application. Waku
+			Play is a proof-of-concept built on
+			<a href="https://waku.org/" target="_blank">Waku</a>, a decentralised messaging protocol.
 		</h2>
 	</Container>
 </section>
