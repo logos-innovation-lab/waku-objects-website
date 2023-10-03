@@ -115,7 +115,7 @@
 			justify-content: center;
 			align-items: center;
 			border-radius: var(--border-radius-subtle);
-			border: var(--border);
+			border: none;
 			line-height: 0;
 		}
 		.close {
