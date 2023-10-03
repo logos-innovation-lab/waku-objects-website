@@ -36,7 +36,7 @@
 
 <Layout iconBg="#0065CC" bind:open={sidebar_show}>
 	<LogoSplit size={20} slot="icon" title="Split logo" />
-	<div slot="title">SafeMeet</div>
+	<div slot="title">Split</div>
 	<svelte:fragment slot="content">
 		<Collapse>
 			<svelte:fragment slot="cl-header">Adding to Chat</svelte:fragment>
