@@ -200,5 +200,5 @@
 			</DetailSection>
 		</div>
 	</section>
+	<Footer />
 </Layout>
-<Footer />
