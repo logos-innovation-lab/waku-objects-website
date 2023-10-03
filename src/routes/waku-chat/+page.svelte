@@ -528,8 +528,5 @@
 			</p>
 		</DetailSection>
 	</section>
-	<Container padY={0}>
-		<Divider padTop={48} />
-	</Container>
 </Layout>
 <Footer />
