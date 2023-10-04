@@ -291,7 +291,10 @@
 		</p>
 		<p slot="second">
 			This page is an in-depth presentation of Waku Chat. You can try the latest build on
-			wakuplay.im/chat or contribute on Github. Waku chat is released under license terms.
+			wakuplay.im/chat or contribute on Github. Waku chat is released under <a
+				href="https://github.com/logos-innovation-lab/waku-objects-playground#license"
+				target="_blank">MIT and Apache v2</a
+			> licenses.
 		</p>
 		<svelte:fragment slot="buttons">
 			<Button variant="strong" link="https://chat.wakuplay.im/">
