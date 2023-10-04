@@ -174,10 +174,13 @@
 		</CollapseItem>
 	</svelte:fragment>
 	<PageHeader bgColor="#F3F3F3" slot="pageheader" bgImage="/images/ui_guidelines_cover.svg">
-		<p slot="second">
+		<p slot="first">
 			Waku Objects are mini-applications that can be added to a host application (typically a chat
-			app) and extend its functionalities. This page contains key information to help you design and
-			build your own Waku Objects. Have a look at <a href="/waku-chat" target="_blank">Waku Play</a>
+			app) and extend its functionalities.
+		</p>
+		<p slot="second">
+			This page contains key information to help you design and build your own Waku Objects. Have a
+			look at <a href="/waku-chat" target="_blank">Waku Play</a>
 			for examples and inspiration. For guidance about development, please refer to the
 			<a
 				href="https://github.com/logos-innovation-lab/waku-objects-playground/blob/main/DEVELOPERS.md"
