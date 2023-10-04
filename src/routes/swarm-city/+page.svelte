@@ -26,7 +26,7 @@
 	<title>Swarm City</title>
 	<meta
 		name="description"
-		content="Swarm City is a Waku Object concept for swarm.city, a blockchain based marketplace with a built in reputation system. With the Swarm City Waku Object, it becomes possible to use a marketplace without leaving Waku Chat."
+		content="Swarm City is a Waku Object concept for swarm.city, a blockchain based marketplace with a built-in reputation system. With the Swarm City Waku Object, it becomes possible to use a marketplace without leaving Waku Chat."
 	/>
 </svelte:head>
 
@@ -198,7 +198,7 @@
 		<p slot="first">
 			Swarm City is a Waku Object concept for <a href="https://swarm.city/" target="_blank"
 				>swarm.city</a
-			>, a blockchain based marketplace with a built in reputation system. With the Swarm City Waku
+			>, a blockchain based marketplace with a built-in reputation system. With the Swarm City Waku
 			Object, it becomes possible to use a marketplace without leaving Waku Chat.
 		</p>
 		<p slot="second">
